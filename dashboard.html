@@ -1,0 +1,10 @@
+<button onclick="logout()">Logout</button>
+<script>
+    if(!localStorage.token) {
+        location.href = '/';
+    }
+    function logout() {
+        localStorage.removeItem('token');
+        location.href='/';
+    }
+</script>

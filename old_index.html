@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="return false;">
+        <input type="text" id="mobile_number">
+        <input type="text" id="otp" style="display: none;">
+        <button id="send_otp" onclick="window.sendOTP()">Get OTP</button>
+        <button id="register" onclick="window.register()" style="display: none;">Register</button>
+    </form>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        if(localStorage.token) {
+            location.href='dashboard.html';
+        }
+        function register() {
+            var otp = $("#otp").val();
+            // api : /verify-otp
+            var res = 'token';
+            if(res) {
+                // verify hogya
+                // localstorage
+                localStorage.setItem('token', res);
+                location.href='dashboard.html';
+            } else {
+                // verify nhi ho paya
+            }
+        }
+
+        function sendOTP() {
+            var mobile_number = $("#mobile_number").val();
+            // api : /send-otp  
+            var res = true;
+            if(res) {
+                // otp send ho chuka h
+                $("#otp").show();
+                $("#send_otp").hide();
+                $("#register").show();
+            } else {
+                // otp nhi bhej pae
+            }
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <br>
+    <center>
+        <div id="frm">
+            <form>
+                <label>Mobilae Number</label>
+                <input type="text" id="mobile_number">
+
+            </form>
+            <br>
+            <button id="otp" onclick="otp()">GET OTP</button>
+        </div>
+        <div id="enterotp" style="display: none;">
+            <label>Enter Otp</label>
+            <input type="Number" name="" placeholder="Enter Otp">
+        </div>
+    </center>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#otp").click(function () {
+                var mobile_number = $("#mobile_number").val();
+                console.log(mobile_number);
+                // $("#frm").hide();
+                // $("#enterotp").show();
+            });
+        });
+        function otp() {
+            alert('Call Otp')
+        }
+    </script>
+</body>
+
+</html> -->

@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:600');
+
+
+.anima-overlay {
+  position            : absolute;
+  opacity             : 0;
+  display             : none;
+  top                 : 0;
+  width               : 100%;
+  height              : 100%;
+}
+.index {
+  width               : 100%;
+  min-width           : 100%;
+  height              : 100vh;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(251, 251, 251, 1.0);
+  opacity             : 1.0;
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-animate-enter1 {
+  opacity             : 0;
+  transform           : translate(0, 350px);
+  display             : block;
+  -webkit-animation   : anima-animate-enter1-frames 0.20000000298s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-animate-enter1-frames 0.20000000298s ease-in-out 1 normal forwards;
+  -o-animation        : anima-animate-enter1-frames 0.20000000298s ease-in-out 1 normal forwards;
+  animation           : anima-animate-enter1-frames 0.20000000298s ease-in-out 1 normal forwards;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay  : 0s;
+  animation-delay     : 0s;
+}
+@-webkit-keyframes anima-animate-enter1-frames {
+  0%
+   
+  {
+  opacity: 0;
+  transform: translate(0, 350px);
+    }
+  
+    
+  100%
+   
+  {
+  opacity: 1;
+  transform: translate(0,0);
+    }
+}
+@-moz-keyframes anima-animate-enter1-frames {
+  0%
+   
+  {
+  opacity: 0;
+  transform: translate(0, 350px);
+    }
+  
+    
+  100%
+   
+  {
+  opacity: 1;
+  transform: translate(0,0);
+    }
+}
+@-o-keyframes anima-animate-enter1-frames {
+  0%
+   
+  {
+  opacity: 0;
+  transform: translate(0, 350px);
+    }
+  
+    
+  100%
+   
+  {
+  opacity: 1;
+  transform: translate(0,0);
+    }
+}
+@keyframes anima-animate-enter1-frames {
+  0%
+   
+  {
+  opacity: 0;
+  transform: translate(0, 350px);
+    }
+  
+    
+  100%
+   
+  {
+  opacity: 1;
+  transform: translate(0,0);
+    }
+}
+.index .rectangle2 {
+  background-color    : rgba(251, 251, 251, 1.0);
+  top                 : 0px;
+  height: 100vh;
+  width               : 100%;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .photo {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 120px;
+  height              : 112px;
+  width               : 112px;
+  position            : absolute;
+  margin              : 0;
+  left: 50%;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  margin-left: -56px;
+}
+.index .photo .photo1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 112px;
+  width               : 112px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .upload {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 195px;
+  height              : 38px;
+  width               : 38px;
+  position            : absolute;
+  margin              : 0;
+  left: calc(50% + 20px);
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .upload .mask {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 38px;
+  width               : 38px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .upload .nouncamera862295 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 13px;
+  height              : 13px;
+  width               : 14px;
+  position            : absolute;
+  margin              : 0;
+  left                : 12px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .upload .nouncamera862295 .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 12px;
+  width               : 14px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .upload .nouncamera862295 .group .shape {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 12px;
+  width               : 14px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .navigationbar {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 16px;
+  height              : 36px;
+  width: auto;
+  position            : absolute;
+  margin              : 0;
+  left: 16px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  right: 16px;
+}
+.index .navigationbar .arrownew {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 16px;
+  width               : 16px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(-270deg);
+  opacity             : 1.0;
+}
+.index .navigationbar .arrownew .shape {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 16px;
+  width               : 16px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(-180deg);
+  opacity             : 1.0;
+}
+.index .navigationbar .signup {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left: 50%;
+  transform: rotate(0deg) translateX(-50%);
+  opacity             : 1.0;
+  font-family         :
+  "Nunito Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 17.0px;
+  color               : rgba(37, 40, 55, 1.0);
+  text-align          : left;
+  line-height         : 36.0px;
+}
+.index .alreadyhaveanaccountlogin {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 515px;
+  height              : auto;
+  width: 100%;
+  position            : absolute;
+  margin              : 0;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "Nunito Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(155, 157, 163, 1.0);
+  text-align: center;
+  line-height         : 25.0px;
+}
+.index .alreadyhaveanaccountlogin .span1 {
+  
+}
+.index .alreadyhaveanaccountlogin .span2 {
+  color               : rgba(37, 40, 55, 1.0);
+}
+.index .alreadyhaveanaccountlogin .span3 {
+  font-family         : "Helvetica", Helvetica, Arial, serif;
+  color               : rgba(37, 40, 55, 1.0);
+}
+.index .btn-view {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 441px;
+  height              : 50px;
+  position            : absolute;
+  margin              : 0;
+  left: 16px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  right: 16px;
+  text-align: center;
+}
+.index .btn-view .backgroundcopy {
+  background-color: rgba(255, 142, 93, 1.0);
+  top                 : 0px;
+  height              : 50px;
+  /* width               : 314px; */
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 5px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  right: 0;
+}
+.index .btn-view .u21b3value {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 12px;
+  height              : auto;
+  width: 100%;
+  position            : absolute;
+  margin              : 0;
+  /* left                : 126px; */
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "Nunito Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 15.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  line-height         : 26.0px;
+}
+.index .phonenumber {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 348px;
+  height              : 45px;
+  right: 32px;
+  position            : absolute;
+  margin              : 0;
+  left: 32px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .phonenumber .username {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 45px;
+  width: 100%;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .phonenumber .username .text {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 25px;
+  height              : 20px;
+  width: 100%;
+  position            : absolute;
+  margin-top: 10px;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  display: flex;
+  align-items: center;
+}
+.index .phonenumber .username .text .u21b3value {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  /* position            : absolute; */
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "Nunito Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 15.0px;
+  color               : rgba(37, 40, 55, 1.0);
+  text-align          : left;
+  line-height         : 20.0px;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  border-bottom: 2px solid #adadad;
+}
+.index .phonenumber .username .label {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 19px;
+  width               : 103px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .phonenumber .username .label .u21b3value {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 0.5;
+  font-family         : "Nunito Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 15.0px;
+  color               : rgba(37, 40, 55, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.24px;
+  line-height         : 19.0px;
+}
+.index .country {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 257px;
+  height              : 75px;
+  position            : absolute;
+  margin              : 0;
+  left: 16px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  right: 16px;
+}
+.index .country .rectangle5copy {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 75px;
+  width: 100%;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .country .icon {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 34px;
+  height              : 5px;
+  width               : 9px;
+  position            : absolute;
+  margin              : 0;
+  right: 15px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .country .icon .icon1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 5px;
+  width               : 9px;
+  position            : absolute;
+  margin              : 0;
+  left: 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .country .name {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 13px;
+  height              : 45px;
+  width: 100%;
+  position            : absolute;
+  margin              : 0;
+  left                : 17px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .country .name .text {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 25px;
+  height              : 20px;
+  width: 100%;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .country .name .text .u21b3value {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width: 100%;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "Nunito Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 15.0px;
+  color               : rgba(37, 40, 55, 1.0);
+  text-align          : left;
+  line-height         : 20.0px;
+}
+.index .country .name .label {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 19px;
+  width: 100%;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.index .country .name .label .u21b3value {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width: 100%;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 0.5;
+  font-family         : "Nunito Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 15.0px;
+  color               : rgba(37, 40, 55, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.24px;
+  line-height         : 19.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events      : none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events      : auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility          : hidden;
+  pointer-events      : none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events      : auto;
+  visibility          : visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility          : hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor              : pointer;
+}
+.anima-word-break {
+  overflow-wrap       : break-word;
+  word-wrap           : break-word;
+  word-break          : break-all;
+  word-break          : break-word;
+}

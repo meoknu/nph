@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:600');
 
 
-.filterf2copy {
+.s_countries {
   width               : 100%;
   min-width: 100%;
   height              : 100vh;
@@ -29,7 +29,7 @@ div {
 div {
   -webkit-text-size-adjust: none;
 }
-.filterf2copy .rectangle2 {
+.s_countries .rectangle2 {
   background-color    : rgba(251, 251, 251, 1.0);
   top                 : 0px;
   height: 100vh;
@@ -40,7 +40,7 @@ div {
   transform           : rotate(0deg);
   opacity             : 1.0;
 }
-.filterf2copy .navigationbar {
+.s_countries .navigationbar {
   background-color    : rgba(255,255,255,0.0);
   top                 : 16px;
   height              : 23px;
@@ -52,7 +52,7 @@ div {
   opacity             : 1.0;
   right: 16px;
 }
-.filterf2copy .navigationbar .selectcountry {
+.s_countries .navigationbar .selectcountry {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : auto;
@@ -71,7 +71,7 @@ div {
   text-align          : center;
   line-height         : 23.0px;
 }
-.filterf2copy .navigationbar .close {
+.s_countries .navigationbar .close {
   background-color    : rgba(255,255,255,0.0);
   top                 : 3px;
   height              : 18px;
@@ -82,7 +82,7 @@ div {
   transform           : rotate(0deg);
   opacity             : 1.0;
 }
-.filterf2copy .navigationbar .close .icon {
+.s_countries .navigationbar .close .icon {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 18px;
@@ -93,7 +93,7 @@ div {
   transform           : rotate(0deg);
   opacity             : 1.0;
 }
-.filterf2copy .rectangle5 {
+.s_countries .rectangle5 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 60px;
   height: calc(100vh - 65px);
@@ -105,7 +105,7 @@ div {
   right: 16px;
   width: calc(100% - 32px);
 }
-.filterf2copy .section1 {
+.s_countries .section1 {
   background-color    : rgba(255,255,255,0.0);
   top: 60px;
   width: auto;
@@ -118,7 +118,7 @@ div {
   overflow: auto;
   bottom: 10px;
 }
-.filterf2copy .section1 > div {
+.s_countries .section1 > div {
   background-color    : rgba(255,255,255,0.0);
   height              : auto;
   width               : auto;
@@ -138,14 +138,14 @@ div {
   justify-content: space-between;
   align-items: center;
 }
-.filterf2copy .section1 > div.active {
+.s_countries .section1 > div.active {
   color: #249d0f;
   color: inherit;
   background-color: rgba(227, 169, 41, 0.11);
   /* color: #fff; */
   background-color: rgba(93, 173, 255, 0.15);
 }
-.filterf2copy .section1 .checkicon {
+.s_countries .section1 .checkicon {
   background-color    : rgba(255,255,255,0.0);
   top                 : 9px;
   height              : 8px;
@@ -156,7 +156,7 @@ div {
   transform           : rotate(0deg);
   opacity             : 1.0;
 }
-.filterf2copy .section1 .linecopy {
+.s_countries .section1 .linecopy {
   background-color    : rgba(255,255,255,0.0);
   top                 : 39px;
   height              : 2px;
@@ -172,7 +172,7 @@ div {
   opacity             : 0.07;
   right: 0;
 }
-.filterf2copy .section1 .linecopy2 {
+.s_countries .section1 .linecopy2 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 94px;
   height              : 2px;
@@ -187,7 +187,7 @@ div {
   transform           : rotate(0deg);
   opacity             : 0.07;
 }
-.filterf2copy .section1 .linecopy3 {
+.s_countries .section1 .linecopy3 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 149px;
   height              : 2px;

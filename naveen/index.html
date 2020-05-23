@@ -7,7 +7,7 @@
         <meta content="yes" name="apple-mobile-web-app-capable"/>
         <meta content="yes" name="mobile-web-app-capable"/>
         <meta content="default" name="apple-mobile-web-app-status-bar-style"/>
-        <link href="./css/filterF2Copy.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/s_countries.css" rel="stylesheet" type="text/css"/>
         <link href="./css/index.css" rel="stylesheet" type="text/css"/>
         <script defer="" src="hotspots.js">
         </script>
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="javascript:animaShowOverlay('filterf2copy', 'anima-animate-enter1'); anima_loadAsyncSrc(); ">
+                    <a href="javascript:animaShowOverlay('s_countries', 'anima-animate-enter1'); anima_loadAsyncSrc(); ">
                         <div class="country">
                             <img alt="Image" anima-src="./img/index-rectangle-5-copy.png" class="rectangle5copy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                             <div class="icon">
@@ -86,8 +86,8 @@
                 </div>
             </div>
         </div>
-        <div class="anima-overlay" id="overlay-filterf2copy" style="min-height:100vh; position:fixed;">
-            <div class="filterf2copy anima-word-break ">
+        <div class="anima-overlay" id="overlay-s_countries" style="min-height:100vh; position:fixed;">
+            <div class="s_countries anima-word-break ">
                 <div style="width: 100%; height: 100%; position:relative; margin:auto;">
                     <div class="rectangle2">
                     </div>
@@ -95,7 +95,7 @@
                         <div class="selectcountry">
                             Select Country
                         </div>
-                        <a href="javascript:animaHideOverlay('filterf2copy', 'anima-animate-disappear');">
+                        <a href="javascript:animaHideOverlay('s_countries', 'anima-animate-disappear');">
                             <div class="close">
                                 <img alt="Image" anima-src="./img/filter-f2-copy-icon@2x.png" class="icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                             </div>
@@ -113,12 +113,12 @@
             </div>
         </div>
         <script>
-            var overlay_id = "overlay-filterf2copy";
+            var overlay_id = "overlay-s_countries";
             document.getElementById(overlay_id).addEventListener("click", function(event) {
                 var e = event || window.event;
                 var clickedDiv = e.toElement || e.target;
                 if (clickedDiv.parentElement.id == overlay_id) {
-                    animaHideOverlay('filterf2copy', 'anima-animate-disappear');
+                    animaHideOverlay('s_countries', 'anima-animate-disappear');
                 }
             }, false);
         </script>
@@ -344,7 +344,7 @@
                     $scope.country.active = false;
                     country.active = true;
                     $scope.country = country;
-                    animaHideOverlay('filterf2copy', 'anima-animate-disappear');
+                    animaHideOverlay('s_countries', 'anima-animate-disappear');
                 }
             });
         </script>

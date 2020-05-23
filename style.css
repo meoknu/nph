@@ -2,12 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 </style>
 
-body{font-family: 'Muli', sans-serif;}
-/* .mdiv{ position: absolute;
-    left: 50%;
-    margin-left: -150px;
-    letter-spacing:0.5px;
-}*/
+body{font-family: 'Muli', sans-serif;
+background: #fbfbfb !important;}
+.maindiv{
+margin: 20px;
+}
+.profile{
+height: 100px;
+width: 100px;
+background-color: #efefef;
+margin: auto;
+border-radius: 50%;
+position: relative;
+}
+
+.profile_camera .fa{
+     background-color: #fff;
+    font-size: 14px;
+    color: #000;
+    position: absolute;
+    top: 76px;
+    right: 6px;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 1px 1px 5px 2px #ddd;
+}
 .in:focus{
   outline: none;
 }
@@ -30,22 +49,20 @@ font-weight: 600;
 }
 .ttl{
   line-height: 20px;
-    color: #918a7e;
-    font-size: 18px;
+  font-size: 18px;
   text-align: center;
-  color: 
-}
+  color: #857c6e;}
 .btn-sub{
     border-radius: 4px;
     background: #fe8e5c;
-    box-shadow: 1px 1px 6px 2px #d3d3d5ed;; 
+    box-shadow: 1px 1px 5px 2px #d3d3d55e;
     width: 100%;
-    padding: 11px;
+    padding: 18px;
     margin-top: 29px;
     border: 0;
     color: #fff;
     text-transform:capitalize;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.0em;
 }
 .btn-sub:focus{

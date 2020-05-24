@@ -1,461 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Nunito+Sans:600');
 
 @font-face {
                           font-family: "SourceSansPro-SemiBold";
                           src: url('../fonts/SourceSansPro-SemiBold.ttf') format("truetype");
                         }
                         
-.verifyotp {
-  width               : 100%;
-  min-width           : 320px;
-  height              : 100vh;
-  min-height          : 568px;
-  position            : relative;
-  overflow            : hidden;
-  margin              : 0px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color    : rgba(251, 251, 251, 1.0);
-  opacity             : 1.0;
-}
-.verifyotp {
-  opacity             : 0;
-  transform           : translate(25px, 0);
-}
-a {
-  text-decoration     : none;
-}
-div {
-  -webkit-text-size-adjust: none;
-}
-.anima-full-width-a {
-  width               : 100%;
-}
-.anima-full-height-a {
-  height              : 100%;
-}
-div {
-  -webkit-text-size-adjust: none;
-}
-.anima-animate-enter {
-  opacity             : 0;
-  transform           : translate(25px, 0);
-  display             : block;
-  -webkit-animation   : anima-animate-enter-frames 0.20000000298s ease-in-out 1 normal forwards;
-  -moz-animation      : anima-animate-enter-frames 0.20000000298s ease-in-out 1 normal forwards;
-  -o-animation        : anima-animate-enter-frames 0.20000000298s ease-in-out 1 normal forwards;
-  animation           : anima-animate-enter-frames 0.20000000298s ease-in-out 1 normal forwards;
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  -o-animation-delay  : 0s;
-  animation-delay     : 0s;
-}
-@-webkit-keyframes anima-animate-enter-frames {
-  0%
-   
-  {
-  opacity: 0;
-  transform: translate(25px, 0);
-    }
-  
-    
-  100%
-   
-  {
-  opacity: 1;
-  transform: translate(0,0);
-    }
-}
-@-moz-keyframes anima-animate-enter-frames {
-  0%
-   
-  {
-  opacity: 0;
-  transform: translate(25px, 0);
-    }
-  
-    
-  100%
-   
-  {
-  opacity: 1;
-  transform: translate(0,0);
-    }
-}
-@-o-keyframes anima-animate-enter-frames {
-  0%
-   
-  {
-  opacity: 0;
-  transform: translate(25px, 0);
-    }
-  
-    
-  100%
-   
-  {
-  opacity: 1;
-  transform: translate(0,0);
-    }
-}
-@keyframes anima-animate-enter-frames {
-  0%
-   
-  {
-  opacity: 0;
-  transform: translate(25px, 0);
-    }
-  
-    
-  100%
-   
-  {
-  opacity: 1;
-  transform: translate(0,0);
-    }
-}
-.verifyotp .rectangle2 {
-  background-color    : rgba(251, 251, 251, 1.0);
-  top                 : 0px;
-  height              : 568px;
-  width               : 320px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .arrownew {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 16px;
-  height              : 16px;
-  width               : 16px;
-  position            : absolute;
-  margin              : 0;
-  left                : 16px;
-  transform           : rotate(-270deg);
-  opacity             : 1.0;
-}
-.verifyotp .arrownew .shape {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 16px;
-  width               : 16px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(-180deg);
-  opacity             : 1.0;
-}
-.verifyotp .texts {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 60px;
-  height              : 96px;
-  width               : calc(100.00% - 22px);
-  position            : absolute;
-  margin              : 0;
-  left                : 11px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .texts .averificationcodewillbesenttoyourphone {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 44px;
-  height              : auto;
-  width               : 100%;
-  /* position            : absolute; */
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 0.5;
-  font-family         : "SourceSansPro-SemiBold", Helvetica, Arial, serif;
-  font-size           : 15.0px;
-  color               : rgba(37, 40, 55, 1.0);
-  text-align          : center;
-  line-height         : 25.6px;
-  margin-top: 10px;
-}
-.verifyotp .texts .verificationcode {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : auto;
-  width               : 100%;
-  /* position            : absolute; */
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "Nunito Sans", Helvetica, Arial, serif;
-  font-weight         : 600;
-  font-style          : normal;
-  font-size           : 24.0px;
-  color               : rgba(37, 40, 55, 1.0);
-  text-align          : center;
-  line-height         : 36.0px;
-}
-.verifyotp .verificationnumber {
-  background-color    : rgba(255,255,255,0.0);
-  position            : relative;
-  height              : 100%;
-  width               : 265px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .verificationnumber-layout-container {
-  pointer-events      : none;
-  flex-direction      : column;
-  top                 : 156px;
-  align-items         : center;
-  height              : 56px;
-  width               : 100%;
-  /* position            : absolute; */
-  margin              : 0;
-  display             : flex;
-  left                : 0;
-  margin-top: 15px;
-}
-.verifyotp .verificationnumber-layout-container > * {
-  pointer-events      : auto;
-}
-.verifyotp .verificationnumber .verificationnumber4 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 56px;
-  width               : 56px;
-  position            : absolute;
-  margin              : 0;
-  left                : 209px;
-  border-radius       : 6px;
-  overflow            : hidden;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .verificationnumber .verificationnumber4 .shape {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 56px;
-  width               : 56px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .verificationnumber .verificationnumber4 .u21b3value {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 13px;
-  height              : auto;
-  width               : 22px;
-  position            : absolute;
-  margin              : 0;
-  left                : 17px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "Helvetica", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(37, 40, 55, 1.0);
-  text-align          : center;
-  line-height         : 26.0px;
-}
-.verifyotp .verificationnumber .verificationnumber3 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 56px;
-  width               : 57px;
-  position            : absolute;
-  margin              : 0;
-  left                : 138px;
-  border-radius       : 6px;
-  overflow            : hidden;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .verificationnumber .verificationnumber3 .shape {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 56px;
-  width               : 57px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .verificationnumber .verificationnumber3 .u21b3value {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 13px;
-  height              : auto;
-  width               : 22px;
-  position            : absolute;
-  margin              : 0;
-  left                : 18px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "Helvetica", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(37, 40, 55, 1.0);
-  text-align          : center;
-  line-height         : 26.0px;
-}
-.verifyotp .verificationnumber .verificationnumber2 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 56px;
-  width               : 57px;
-  position            : absolute;
-  margin              : 0;
-  left                : 68px;
-  border-radius       : 6px;
-  overflow            : hidden;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .verificationnumber .verificationnumber2 .shape {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 56px;
-  width               : 57px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .verificationnumber .verificationnumber2 .u21b3value {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 13px;
-  height              : auto;
-  width               : 22px;
-  position            : absolute;
-  margin              : 0;
-  left                : 17px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "Helvetica", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(37, 40, 55, 1.0);
-  text-align          : center;
-  line-height         : 26.0px;
-}
-.verifyotp .verificationnumber .verificationnumber1 {
-  background-color    : rgba(255, 142, 93, 1.0);
-  top                 : 0px;
-  height              : 52px;
-  width               : 52px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 6px;
-  overflow            : hidden;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .verificationnumber .verificationnumber1 .shape {
-  background-color    : rgba(255, 142, 93, 1.0);
-  top                 : 0px;
-  height              : 52px;
-  width               : 52px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 6px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.verifyotp .verificationnumber .verificationnumber1 .u21b3value {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 13px;
-  height              : auto;
-  width               : 22px;
-  position            : absolute;
-  margin              : 0;
-  left                : 15px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "Helvetica", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(255, 255, 255, 1.0);
-  text-align          : center;
-  line-height         : 26.0px;
-}
 /* .anima-animate-appear prefix for appear animations */
 .anima-animate-appear {
   opacity             : 0;
   display             : block;
-  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
-  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
-  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
   animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
 }
 .anima-animate-disappear {
   opacity             : 1;
   display             : block;
-  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
-  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
-  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
   animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
 }
 .anima-animate-nodelay {
-  -webkit-animation-delay: 0;
-  -moz-animation-delay: 0;
-  -o-animation-delay  : 0;
-  animation-delay     : 0;
-}
-@-webkit-keyframes anima-reveal {
-  0%
-   
-  {
-      opacity: 0;
-    }
-  
-    
-  100%
-   
-  {
-      opacity: 1;
-    }
-}
-@-moz-keyframes anima-reveal {
-  0%
-   
-  {
-      opacity: 0;
-    }
-  
-    
-  100%
-   
-  {
-      opacity: 1;
-    }
-}
-@-o-keyframes anima-reveal {
-  0%
-   
-  {
-      opacity: 0;
-    }
-  
-    
-  100%
-   
-  {
-      opacity: 1;
-    }
+  animation-delay     : 0s;
 }
 @keyframes anima-reveal {
-  0%
-   
-  {
-      opacity: 0;
-    }
-  
-    
-  100%
-   
-  {
-      opacity: 1;
-    }
+  from {
+    opacity             : 0;
+  }
+  to {
+    opacity             : 1;
+  }
+}
+a {
+  text-decoration     : none;
+}
+.anima-flexbox-container a {
+  line-height         : 0;
 }
 .anima-component-wrapper,
 .anima-component-wrapper * {
@@ -488,9 +64,325 @@ div {
 .anima-listeners-active-click * {
   cursor              : pointer;
 }
-.anima-word-break {
+.anima-component-wrapper a,
+.anima-screen a {
+  text-decoration     : none;
+}
+.anima-flexbox-container a {
+  line-height         : 0;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+.anima-screen textarea:focus,
+.anima-screen input:focus {
+  outline             : none;
+}
+.anima-screen div {
+  -webkit-text-size-adjust: none;
+}
+.anima-container-center-vertical,
+.anima-container-center-horizontal {
+  pointer-events      : none;
+  display             : flex;
+  flex-direction      : row;
+  padding             : 0;
+  margin              : 0;
+}
+.anima-container-center-vertical {
+  align-items         : center;
+  height              : 100%;
+}
+.anima-container-center-horizontal {
+  justify-content     : center;
+  width               : 100%;
+}
+.anima-container-center-vertical > *,
+.anima-container-center-horizontal > * {
+  pointer-events      : auto;
+  flex-shrink         : 0;
+}
+.anima-component-wrapper ,
+.anima-screen {
   overflow-wrap       : break-word;
   word-wrap           : break-word;
   word-break          : break-all;
   word-break          : break-word;
+}
+.anima-auto-animated div {
+  opacity             : 0;
+  position            : absolute;
+  --anima-z-index: -1;
+}
+/* ANIMA screen - verifyotp */
+.font-class-1 {
+  font-family         : "Helvetica", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  line-height         : 26.0px;
+}
+.font-class-2 {
+  font-family         : Nunito Sans, Helvetica, Arial, serif;
+  font-style          : normal;
+  font-weight         : 600;
+}
+:root {
+  --auto-palette-color-1: rgba(37,40,55,1.0);
+  --auto-palette-color-2: rgba(255,255,255,1.0);
+  --auto-palette-color-3: rgba(255,142,93,1.0);
+}
+@keyframes anima-animate-enter-frames {
+  from {
+    opacity             : 0;
+    transform           : translate(25px, 0);
+  }
+  to {
+    opacity             : 1;
+    transform           : translate(0,0);
+  }
+}
+.verifyotp .verification-number-ppk0VD {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 56px;
+  justify-content     : flex-start;
+  position            : absolute;
+  top                 : 156px;
+  transform           : rotate(0deg);
+  width               : auto;
+}
+.verifyotp .verification-number-4-yuhCoW {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  background-image    : url(".././img/verifyotp-shape-1@2x.png");
+  background-size     : 100% 100%;
+  border-radius       : 6.0px;
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  flex-shrink         : 0;
+  height              : 56px;
+  justify-content     : flex-start;
+  margin-left         : 14px;
+  overflow            : hidden;
+  padding             : 13.0px 17.0px;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : 56px;
+}
+.verifyotp .u21b3-value-OuKIgg {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  flex-shrink         : 0;
+  height              : auto;
+  min-height          : 26px;
+  position            : relative;
+  text-align          : center;
+  transform           : rotate(0deg);
+  width               : 22px;
+}
+.verifyotp .a-verification-code-will-be-sent-to-your-phone-yfQWVM {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  font-family         : "SourceSansPro-SemiBold", Helvetica, Arial, serif;
+  font-size           : 15.0px;
+  height              : auto;
+  left                : 0px;
+  letter-spacing      : 0.00px;
+  line-height         : 25.6px;
+  opacity             : 0.5;
+  position            : absolute;
+  text-align          : center;
+  top                 : 44px;
+  transform           : rotate(0deg);
+  width               : 100%;
+}
+.verifyotp .texts-F7ZrFf {
+  background-color    : rgba(255,255,255,0);
+  height              : 96px;
+  left                : 11px;
+  position            : absolute;
+  top                 : 60px;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 22px);
+}
+.verifyotp .verification-code-vEznXK {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  font-size           : 24.0px;
+  height              : auto;
+  left                : 0px;
+  line-height         : 36.0px;
+  position            : absolute;
+  text-align          : center;
+  top                 : 0px;
+  transform           : rotate(0deg);
+  width               : 100%;
+}
+.verifyotp .u21b3-value-CDdDTa {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  flex-shrink         : 0;
+  height              : auto;
+  min-height          : 26px;
+  position            : relative;
+  text-align          : center;
+  transform           : rotate(0deg);
+  width               : 22px;
+}
+.verifyotp {
+  background-color    : rgba(251,251,251,1.0);
+  display             : block;
+  height              : 100vh;
+  margin              : 0px;
+  min-height          : 358.0px;
+  min-width           : 320.0px;
+  overflow            : hidden;
+  position            : relative;
+  width               : 100%;
+  opacity             : 0;
+  transform           : translate(25px, 0);
+}
+.verifyotp.anima-animate-enter {
+  animation           : anima-animate-enter-frames 0.20s ease-in-out 0.00s 1 normal forwards;
+  display             : block;
+  opacity             : 0;
+  transform           : translate(25px, 0);
+}
+.verifyotp .shape-iU2GPq {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 16px;
+  position            : relative;
+  transform           : rotate(-180deg);
+  width               : 16px;
+}
+.verifyotp .arrow-new-04vE3M {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  cursor              : pointer;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 16px;
+  justify-content     : flex-start;
+  left                : 16px;
+  position            : absolute;
+  top                 : 16px;
+  transform           : rotate(-270deg);
+  width               : auto;
+}
+.verifyotp .verification-number-1-wLxYbA {
+  align-items         : center;
+  background-color    : var(--auto-palette-color-3);
+  border-radius       : 6.0px;
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  flex-shrink         : 0;
+  height              : 52px;
+  justify-content     : flex-start;
+  overflow            : hidden;
+  padding             : 0 15.0px;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : 52px;
+}
+.verifyotp .u21b3-value-aA57bE {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-2);
+  flex-shrink         : 0;
+  height              : auto;
+  min-height          : 26px;
+  position            : relative;
+  text-align          : center;
+  transform           : rotate(0deg);
+  width               : 22px;
+}
+.verifyotp .continuew-btn-90kEfx {
+  background-color    : rgba(255,255,255,0);
+  bottom              : 16px;
+  cursor              : pointer;
+  height              : 52px;
+  left                : 16px;
+  position            : absolute;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 32px);
+}
+.verifyotp .background-2YYu7L {
+  background-color    : var(--auto-palette-color-3);
+  border-radius       : 5.0px;
+  height              : 100%;
+  left                : 0px;
+  position            : absolute;
+  top                 : 0px;
+  transform           : rotate(0deg);
+  width               : 100%;
+}
+.verifyotp .u21b3-value-7VR4xT {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-2);
+  font-size           : 15.0px;
+  height              : auto;
+  left                : 0px;
+  line-height         : 26.0px;
+  position            : absolute;
+  text-align          : center;
+  top                 : 12px;
+  transform           : rotate(0deg);
+  width               : 100%;
+}
+.verifyotp .verification-number-2-Ro5B45 {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  background-image    : url(".././img/verifyotp-shape-3@2x.png");
+  background-size     : 100% 100%;
+  border-radius       : 6.0px;
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  flex-shrink         : 0;
+  height              : 56px;
+  justify-content     : flex-start;
+  margin-left         : 16px;
+  overflow            : hidden;
+  padding             : 13.0px 17.0px;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : 57px;
+}
+.verifyotp .u21b3-value-k5nlxy {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  flex-shrink         : 0;
+  height              : auto;
+  min-height          : 26px;
+  position            : relative;
+  text-align          : center;
+  transform           : rotate(0deg);
+  width               : 22px;
+}
+.verifyotp .verification-number-3-fxnyt1 {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  background-image    : url(".././img/verifyotp-shape-2@2x.png");
+  background-size     : 100% 100%;
+  border-radius       : 6.0px;
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  flex-shrink         : 0;
+  height              : 56px;
+  justify-content     : flex-start;
+  margin-left         : 13px;
+  overflow            : hidden;
+  padding             : 13.0px 17.0px;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : 57px;
 }

@@ -5,39 +5,92 @@
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
         <style>
-            @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:600");
-            @font-face {
-                font-family
+            @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Nunito+Sans:600");
+            .verificationsuccess {
+                width
+                               
                 :
                  
-                "SourceSansPro-SemiBold"
+                100%
                 ;
                 
-                                          
-                src
+                  
+                min-width
+                           
                 :
                  
-                url("../fonts/SourceSansPro-SemiBold.ttf")
-                 
-                format("truetype")
+                320px
                 ;
-            }
-            .verificationcopy {
-                width               : 100%;
-                min-width           : 320px;
-                height              : 100vh;
-                min-height          : 568px;
-                position            : relative;
-                overflow            : hidden;
-                margin              : 0px;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                background-color    : rgba(251, 251, 251, 1.0);
-                opacity             : 1.0;
-            }
-            .verificationcopy {
-                opacity             : 0;
-                transform           : translate(25px, 0);
+                
+                  
+                height
+                              
+                :
+                 
+                100vh
+                ;
+                
+                  
+                min-height
+                          
+                :
+                 
+                358px
+                ;
+                
+                  
+                position
+                            
+                :
+                 
+                relative
+                ;
+                
+                  
+                overflow
+                            
+                :
+                 
+                hidden
+                ;
+                
+                  
+                margin
+                              
+                :
+                 
+                0px
+                ;
+                
+                  
+                -webkit-font-smoothing
+                :
+                 
+                antialiased
+                ;
+                
+                  
+                -moz-osx-font-smoothing
+                :
+                 
+                grayscale
+                ;
+                
+                  
+                background-color
+                    
+                :
+                 
+                rgba(251, 251, 251, 1.0)
+                ;
+                
+                  
+                opacity
+                             
+                :
+                 
+                1.0
+                ;
             }
             a {
                 text-decoration     : none;
@@ -54,111 +107,10 @@
             div {
                 -webkit-text-size-adjust: none;
             }
-            .anima-animate-enter {
-                opacity             : 0;
-                transform           : translate(25px, 0);
-                display             : block;
-                -webkit-animation   : anima-animate-enter-frames 0.20000000298s ease-in-out 1 normal forwards;
-                -moz-animation      : anima-animate-enter-frames 0.20000000298s ease-in-out 1 normal forwards;
-                -o-animation        : anima-animate-enter-frames 0.20000000298s ease-in-out 1 normal forwards;
-                animation           : anima-animate-enter-frames 0.20000000298s ease-in-out 1 normal forwards;
-                -webkit-animation-delay: 0s;
-                -moz-animation-delay: 0s;
-                -o-animation-delay  : 0s;
-                animation-delay     : 0s;
-            }
-            @-webkit-keyframes anima-animate-enter-frames {
-                0%
-                
-                   
-                  
-                {
-                  opacity: 0;
-                  transform: translate(25px, 0);
-                    }
-                
-                  
-                    
-                  
-                100%
-                
-                   
-                  
-                {
-                  opacity: 1;
-                  transform: translate(0,0);
-                    }
-            }
-            @-moz-keyframes anima-animate-enter-frames {
-                0%
-                
-                   
-                  
-                {
-                  opacity: 0;
-                  transform: translate(25px, 0);
-                    }
-                
-                  
-                    
-                  
-                100%
-                
-                   
-                  
-                {
-                  opacity: 1;
-                  transform: translate(0,0);
-                    }
-            }
-            @-o-keyframes anima-animate-enter-frames {
-                0%
-                
-                   
-                  
-                {
-                  opacity: 0;
-                  transform: translate(25px, 0);
-                    }
-                
-                  
-                    
-                  
-                100%
-                
-                   
-                  
-                {
-                  opacity: 1;
-                  transform: translate(0,0);
-                    }
-            }
-            @keyframes anima-animate-enter-frames {
-                0%
-                
-                   
-                  
-                {
-                  opacity: 0;
-                  transform: translate(25px, 0);
-                    }
-                
-                  
-                    
-                  
-                100%
-                
-                   
-                  
-                {
-                  opacity: 1;
-                  transform: translate(0,0);
-                    }
-            }
-            .verificationcopy .rectangle2 {
+            .verificationsuccess .rectangle2 {
                 background-color    : rgba(251, 251, 251, 1.0);
                 top                 : 0px;
-                height              : 568px;
+                height              : 358px;
                 width               : 320px;
                 position            : absolute;
                 margin              : 0;
@@ -166,7 +118,7 @@
                 transform           : rotate(0deg);
                 opacity             : 1.0;
             }
-            .verificationcopy .arrownew {
+            .verificationsuccess .navigationbarcopy {
                 background-color    : rgba(255,255,255,0.0);
                 top                 : 16px;
                 height              : 16px;
@@ -174,10 +126,21 @@
                 position            : absolute;
                 margin              : 0;
                 left                : 16px;
+                transform           : rotate(0deg);
+                opacity             : 1.0;
+            }
+            .verificationsuccess .navigationbarcopy .arrownew {
+                background-color    : rgba(255,255,255,0.0);
+                top                 : 0px;
+                height              : 16px;
+                width               : 16px;
+                position            : relative;
+                margin              : 0;
+                left                : 0px;
                 transform           : rotate(-270deg);
                 opacity             : 1.0;
             }
-            .verificationcopy .arrownew .shape {
+            .verificationsuccess .navigationbarcopy .arrownew .shape {
                 background-color    : rgba(255,255,255,0.0);
                 top                 : 0px;
                 height              : 16px;
@@ -188,20 +151,20 @@
                 transform           : rotate(-180deg);
                 opacity             : 1.0;
             }
-            .verificationcopy .texts {
+            .verificationsuccess .group {
                 background-color    : rgba(255,255,255,0.0);
-                top                 : 60px;
-                height              : 96px;
-                width               : calc(100.00% - 22px);
+                top                 : 164px;
+                height              : 76px;
+                width               : calc(100.00% - 32px);
                 position            : absolute;
                 margin              : 0;
-                left                : 11px;
+                left                : 16px;
                 transform           : rotate(0deg);
                 opacity             : 1.0;
             }
-            .verificationcopy .texts .averificationcodewillbesenttoyourphone {
+            .verificationsuccess .group .averificationcodewillbesenttoyourphone {
                 background-color    : rgba(255,255,255,0.0);
-                top                 : 44px;
+                top                 : 30px;
                 height              : auto;
                 width               : 100%;
                 position            : absolute;
@@ -209,13 +172,15 @@
                 left                : 0px;
                 transform           : rotate(0deg);
                 opacity             : 0.5;
-                font-family         : "SourceSansPro-SemiBold", Helvetica, Arial, serif;
+                font-family         : "Source Sans Pro", Helvetica, Arial, serif;
+                font-weight         : 400;
+                font-style          : normal;
                 font-size           : 15.0px;
                 color               : rgba(37, 40, 55, 1.0);
                 text-align          : center;
                 line-height         : 25.6px;
             }
-            .verificationcopy .texts .verificationcode {
+            .verificationsuccess .group .verificationsucceed {
                 background-color    : rgba(255,255,255,0.0);
                 top                 : 0px;
                 height              : auto;
@@ -228,191 +193,93 @@
                 font-family         : "Nunito Sans", Helvetica, Arial, serif;
                 font-weight         : 600;
                 font-style          : normal;
-                font-size           : 24.0px;
+                font-size           : 17.0px;
                 color               : rgba(37, 40, 55, 1.0);
                 text-align          : center;
-                line-height         : 36.0px;
+                line-height         : 26.0px;
             }
-            .verificationcopy .verificationnumber {
+            .verificationsuccess .icverifieduser24px {
                 background-color    : rgba(255,255,255,0.0);
                 position            : relative;
                 height              : 100%;
-                width               : 265px;
+                width               : 64px;
                 transform           : rotate(0deg);
-                opacity             : 1.0;
+                opacity             : 0.3;
             }
-            .verificationcopy .verificationnumber-layout-container {
+            .verificationsuccess .icverifieduser24px-layout-container {
                 pointer-events      : none;
                 flex-direction      : column;
-                top                 : 156px;
+                top                 : 60px;
                 align-items         : center;
-                height              : 56px;
+                height              : 64px;
                 width               : 100%;
                 position            : absolute;
                 margin              : 0;
                 display             : flex;
                 left                : 0;
             }
-            .verificationcopy .verificationnumber-layout-container > * {
+            .verificationsuccess .icverifieduser24px-layout-container > * {
                 pointer-events      : auto;
             }
-            .verificationcopy .verificationnumber .verificationnumber4 {
+            .verificationsuccess .icverifieduser24px .path {
                 background-color    : rgba(255,255,255,0.0);
                 top                 : 0px;
-                height              : 56px;
-                width               : 56px;
-                position            : absolute;
-                margin              : 0;
-                left                : 209px;
-                border-radius       : 6px;
-                overflow            : hidden;
-                transform           : rotate(0deg);
-                opacity             : 1.0;
-            }
-            .verificationcopy .verificationnumber .verificationnumber4 .shape {
-                background-color    : rgba(255,255,255,0.0);
-                top                 : 0px;
-                height              : 56px;
-                width               : 56px;
+                height              : 64px;
+                width               : 64px;
                 position            : absolute;
                 margin              : 0;
                 left                : 0px;
                 transform           : rotate(0deg);
                 opacity             : 1.0;
             }
-            .verificationcopy .verificationnumber .verificationnumber4 .u21b3value {
+            .verificationsuccess .icverifieduser24px .shape {
                 background-color    : rgba(255,255,255,0.0);
-                top                 : 13px;
-                height              : auto;
-                width               : 22px;
+                top                 : 3px;
+                height              : 59px;
+                width               : 48px;
                 position            : absolute;
                 margin              : 0;
-                left                : 17px;
-                transform           : rotate(0deg);
-                opacity             : 1.0;
-                font-family         : "Helvetica", Helvetica, Arial, serif;
-                font-size           : 16.0px;
-                color               : rgba(37, 40, 55, 1.0);
-                text-align          : center;
-                line-height         : 26.0px;
-            }
-            .verificationcopy .verificationnumber .verificationnumber3 {
-                background-color    : rgba(255,255,255,0.0);
-                top                 : 0px;
-                height              : 56px;
-                width               : 57px;
-                position            : absolute;
-                margin              : 0;
-                left                : 138px;
-                border-radius       : 6px;
-                overflow            : hidden;
+                left                : 8px;
                 transform           : rotate(0deg);
                 opacity             : 1.0;
             }
-            .verificationcopy .verificationnumber .verificationnumber3 .shape {
+            .verificationsuccess .continuewbtn {
                 background-color    : rgba(255,255,255,0.0);
-                top                 : 0px;
-                height              : 56px;
-                width               : 57px;
+                bottom              : 16px;
+                height              : 50px;
+                width               : calc(100.00% - 32px);
                 position            : absolute;
                 margin              : 0;
-                left                : 0px;
+                left                : 16px;
                 transform           : rotate(0deg);
                 opacity             : 1.0;
             }
-            .verificationcopy .verificationnumber .verificationnumber3 .u21b3value {
-                background-color    : rgba(255,255,255,0.0);
-                top                 : 13px;
-                height              : auto;
-                width               : 22px;
-                position            : absolute;
-                margin              : 0;
-                left                : 18px;
-                transform           : rotate(0deg);
-                opacity             : 1.0;
-                font-family         : "Helvetica", Helvetica, Arial, serif;
-                font-size           : 16.0px;
-                color               : rgba(37, 40, 55, 1.0);
-                text-align          : center;
-                line-height         : 26.0px;
-            }
-            .verificationcopy .verificationnumber .verificationnumber2 {
-                background-color    : rgba(255,255,255,0.0);
-                top                 : 0px;
-                height              : 56px;
-                width               : 57px;
-                position            : absolute;
-                margin              : 0;
-                left                : 68px;
-                border-radius       : 6px;
-                overflow            : hidden;
-                transform           : rotate(0deg);
-                opacity             : 1.0;
-            }
-            .verificationcopy .verificationnumber .verificationnumber2 .shape {
-                background-color    : rgba(255,255,255,0.0);
-                top                 : 0px;
-                height              : 56px;
-                width               : 57px;
-                position            : absolute;
-                margin              : 0;
-                left                : 0px;
-                transform           : rotate(0deg);
-                opacity             : 1.0;
-            }
-            .verificationcopy .verificationnumber .verificationnumber2 .u21b3value {
-                background-color    : rgba(255,255,255,0.0);
-                top                 : 13px;
-                height              : auto;
-                width               : 22px;
-                position            : absolute;
-                margin              : 0;
-                left                : 17px;
-                transform           : rotate(0deg);
-                opacity             : 1.0;
-                font-family         : "Helvetica", Helvetica, Arial, serif;
-                font-size           : 16.0px;
-                color               : rgba(37, 40, 55, 1.0);
-                text-align          : center;
-                line-height         : 26.0px;
-            }
-            .verificationcopy .verificationnumber .verificationnumber1 {
+            .verificationsuccess .continuewbtn .background {
                 background-color    : rgba(255, 142, 93, 1.0);
                 top                 : 0px;
-                height              : 52px;
-                width               : 52px;
+                height              : 100%;
+                width               : 100%;
                 position            : absolute;
                 margin              : 0;
                 left                : 0px;
-                border-radius       : 6px;
-                overflow            : hidden;
+                border-radius       : 5px;
                 transform           : rotate(0deg);
                 opacity             : 1.0;
             }
-            .verificationcopy .verificationnumber .verificationnumber1 .shape {
-                background-color    : rgba(255, 142, 93, 1.0);
-                top                 : 0px;
-                height              : 52px;
-                width               : 52px;
-                position            : absolute;
-                margin              : 0;
-                left                : 0px;
-                border-radius       : 6px;
-                transform           : rotate(0deg);
-                opacity             : 1.0;
-            }
-            .verificationcopy .verificationnumber .verificationnumber1 .u21b3value {
+            .verificationsuccess .continuewbtn .u21b3value {
                 background-color    : rgba(255,255,255,0.0);
-                top                 : 13px;
+                top                 : 12px;
                 height              : auto;
-                width               : 22px;
+                width               : 100%;
                 position            : absolute;
                 margin              : 0;
-                left                : 15px;
+                left                : 0px;
                 transform           : rotate(0deg);
                 opacity             : 1.0;
-                font-family         : "Helvetica", Helvetica, Arial, serif;
-                font-size           : 16.0px;
+                font-family         : "Nunito Sans", Helvetica, Arial, serif;
+                font-weight         : 600;
+                font-style          : normal;
+                font-size           : 15.0px;
                 color               : rgba(255, 255, 255, 1.0);
                 text-align          : center;
                 line-height         : 26.0px;
@@ -562,144 +429,38 @@
     </head>
     <body style="margin: 0;
  background: rgba(251, 251, 251, 1.0);">
-        <input id="anPageName" name="page" type="hidden" value="verificationcopy"/>
-        <div anima-show-on-scroll="" class="verificationcopy anima-animate-enter anima-word-break ">
+        <input id="anPageName" name="page" type="hidden" value="verificationsuccess"/>
+        <div class="verificationsuccess anima-word-break ">
             <div class="rectangle2">
             </div>
-            <a href="anima://back">
+            <div class="navigationbarcopy">
                 <div class="arrownew">
-                    <img alt="Image" class="shape" src="./verification-copy-shape@2x.png"/>
-                </div>
-            </a>
-            <div class="texts">
-                <div class="averificationcodewillbesenttoyourphone">
-                    A verification code will be sent  to your phone.
-                </div>
-                <div class="verificationcode">
-                    Verification Code
+                    <img alt="Image" class="shape" src="./verification-success-shape@2x.png"/>
                 </div>
             </div>
-            <div class="verificationnumber-layout-container">
-                <div class="verificationnumber">
-                    <div class="verificationnumber4">
-                        <img alt="Image" class="shape" src="./verification-copy-shape-1@2x.png"/>
-                        <div class="u21b3value">
-                            7
-                        </div>
-                    </div>
-                    <div class="verificationnumber3">
-                        <img alt="Image" class="shape" src="./verification-copy-shape-2@2x.png"/>
-                        <div class="u21b3value">
-                            8
-                        </div>
-                    </div>
-                    <div class="verificationnumber2">
-                        <img alt="Image" class="shape" src="./verification-copy-shape-3@2x.png"/>
-                        <div class="u21b3value">
-                            2
-                        </div>
-                    </div>
-                    <div class="verificationnumber1">
-                        <div class="shape">
-                        </div>
-                        <div class="u21b3value">
-                            4
-                        </div>
-                    </div>
+            <div class="group">
+                <div class="averificationcodewillbesenttoyourphone">
+                    you’re now into this social networks and enjoy connect with others
+                </div>
+                <div class="verificationsucceed">
+                    Verification succeed
+                </div>
+            </div>
+            <div class="icverifieduser24px-layout-container">
+                <div class="icverifieduser24px">
+                    <img alt="Image" class="path" src="./verification-success-path@2x.png"/>
+                    <img alt="Image" class="shape" src="./verification-success-shape-1@2x.png"/>
+                </div>
+            </div>
+            <div class="continuewbtn">
+                <div class="background">
+                </div>
+                <div class="u21b3value">
+                    Continue
                 </div>
             </div>
         </div>
         <!-- Scripts -->
-        <script>
-            function AnimaShowOnScroll() {
-                this.toShow = [];
-                this.nextEventY = undefined;
-            }
-            AnimaShowOnScroll.prototype.show = function(e) {
-                e.style.display = "";
-            };
-            AnimaShowOnScroll.prototype.hide = function(e) {
-                e.style.display = "none";
-            };
-            AnimaShowOnScroll.prototype.getTop = function(e) {
-                if (e.animaTop != undefined && e.animaTop != 0) {
-                    return e.animaTop;
-                }
-                var top = 0;
-                var iter = e;
-                do {
-                    top += iter.offsetTop || 0;
-                    iter = iter.offsetParent;
-                } while (iter);
-                e.animaTop = top;
-                return top;
-            };
-            AnimaShowOnScroll.prototype.onScroll = function() {
-                var screenBottom = window.pageYOffset + window.innerHeight;
-                if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
-                    return;
-                }
-                this.nextEventY = undefined;
-                for (var i = 0; i < this.toShow.length; i++) {
-                    var e = this.toShow[i];
-                    var top = this.getTop(e);
-                    if (top < screenBottom) {
-                        this.show(e);
-                        this.toShow.shift();
-                        i--;
-                    } else {
-                        this.nextEventY = top;
-                        break;
-                    }
-                }
-            };
-            AnimaShowOnScroll.prototype.resetScrolling = function() {
-                var screenBottom = window.pageYOffset + window.innerHeight;
-                for (var i = 0; i < this.toShow.length; i++) {
-                    var e = this.toShow[i];
-                    this.show(e);
-                }
-                this.toShow = [];
-                this.nextEventY == undefined;
-                var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
-                itemsToShowOnScroll = itemsToShowOnScroll.filter(function(e) {
-                    return e.getAttribute("anima-show-on-scroll") != undefined;
-                });
-                var getTop = this.getTop;
-                itemsToShowOnScroll.sort(function(a, b) {
-                    return getTop(a) - getTop(b);
-                });
-                for (var i = 0; i < itemsToShowOnScroll.length; i++) {
-                    var e = itemsToShowOnScroll[i];
-                    var top = this.getTop(e);
-                    if (top < screenBottom) {
-                        continue;
-                    }
-                    this.toShow.push(e);
-                    this.hide(e);
-                    this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
-                }
-            };
-            AnimaShowOnScroll.prototype.handleEvent = function(e) {
-                switch (e.type) {
-                    case "scroll":
-                        this.onScroll();
-                        break;
-                    case "resize":
-                        this.resetScrolling();
-                        break;
-                }
-            };
-            AnimaShowOnScroll.prototype.init = function() {
-                this.resetScrolling();
-                window.addEventListener("scroll", this);
-                window.addEventListener("resize", this);
-            };
-            setTimeout(function() {
-                var animaShowOnScroll = new AnimaShowOnScroll();
-                animaShowOnScroll.init();
-            }, 250);
-        </script>
         <!-- End of Scripts -->
     </body>
 </html>

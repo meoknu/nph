@@ -163,7 +163,7 @@ div {
   top                 : 44px;
   height              : auto;
   width               : 100%;
-  position            : absolute;
+  /* position            : absolute; */
   margin              : 0;
   left                : 0px;
   transform           : rotate(0deg);
@@ -173,13 +173,14 @@ div {
   color               : rgba(37, 40, 55, 1.0);
   text-align          : center;
   line-height         : 25.6px;
+  margin-top: 10px;
 }
 .verifyotp .texts .verificationcode {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : auto;
   width               : 100%;
-  position            : absolute;
+  /* position            : absolute; */
   margin              : 0;
   left                : 0px;
   transform           : rotate(0deg);
@@ -207,10 +208,11 @@ div {
   align-items         : center;
   height              : 56px;
   width               : 100%;
-  position            : absolute;
+  /* position            : absolute; */
   margin              : 0;
   display             : flex;
   left                : 0;
+  margin-top: 15px;
 }
 .verifyotp .verificationnumber-layout-container > * {
   pointer-events      : auto;

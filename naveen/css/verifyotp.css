@@ -1,3 +1,8 @@
+html, body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Nunito+Sans:600');
 
 @font-face {
@@ -135,8 +140,8 @@ a {
 }
 @keyframes anima-animate-enter-frames {
   from {
-    opacity             : 0;
-    transform           : translate(25px, 0);
+    opacity             : 1;
+    transform           : translate(100px, 0);
   }
   to {
     opacity             : 1;
@@ -249,13 +254,13 @@ a {
   position            : relative;
   width               : 100%;
   opacity             : 0;
-  transform           : translate(25px, 0);
+  transform           : translate(100px, 0);
 }
 .verifyotp.anima-animate-enter {
   animation           : anima-animate-enter-frames 0.20s ease-in-out 0.00s 1 normal forwards;
   display             : block;
-  opacity             : 0;
-  transform           : translate(25px, 0);
+  opacity             : 1;
+  transform           : translate(100px, 0);
 }
 .verifyotp .shape-iU2GPq {
   background-color    : rgba(255,255,255,0);

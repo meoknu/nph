@@ -143,63 +143,6 @@ a {
     transform           : translate(0,0);
   }
 }
-.verificationsuccess .background-2YYu7L {
-  background-color    : var(--auto-palette-color-3);
-  border-radius       : 5.0px;
-  height              : 100%;
-  left                : 0px;
-  position            : absolute;
-  top                 : 0px;
-  transform           : rotate(0deg);
-  width               : 100%;
-}
-.verificationsuccess .continuew-btn-90kEfx {
-  background-color    : rgba(255,255,255,0);
-  bottom              : 16px;
-  height              : 52px;
-  left                : 16px;
-  position            : absolute;
-  transform           : rotate(0deg);
-  width               : calc(100.00% - 32px);
-}
-.verificationsuccess .verification-succeed-EaABgQ {
-  background-color    : rgba(255,255,255,0);
-  color               : var(--auto-palette-color-1);
-  flex-shrink         : 0;
-  font-size           : 17.0px;
-  height              : auto;
-  line-height         : 26.0px;
-  min-height          : 26px;
-  position            : relative;
-  text-align          : center;
-  transform           : rotate(0deg);
-  width               : 100%;
-}
-.verificationsuccess .shape-qaNsel {
-  background-color    : rgba(255,255,255,0);
-  flex-shrink         : 0;
-  height              : 59px;
-  position            : relative;
-  transform           : rotate(0deg);
-  width               : 48px;
-}
-.verificationsuccess .ic-verified-user-24px-Cdlk2j {
-  align-items         : flex-end;
-  background-color    : rgba(255,255,255,0);
-  background-image    : url(".././img/verification-success-path@2x.png");
-  background-size     : 100% 100%;
-  box-sizing          : border-box;
-  display             : inline-flex;
-  flex-direction      : row;
-  height              : 64px;
-  justify-content     : flex-start;
-  opacity             : 0.3;
-  padding             : 2.0px 8.0px;
-  position            : absolute;
-  top                 : 60px;
-  transform           : rotate(0deg);
-  width               : auto;
-}
 .verificationsuccess .navigation-bar-copy-Ht58Bg {
   align-items         : flex-start;
   background-color    : rgba(255,255,255,0);
@@ -236,6 +179,19 @@ a {
   transform           : rotate(-180deg);
   width               : 16px;
 }
+.verificationsuccess .u21b3-value-7VR4xT {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-2);
+  font-size           : 15.0px;
+  height              : auto;
+  left                : 0px;
+  line-height         : 26.0px;
+  position            : absolute;
+  text-align          : center;
+  top                 : 12px;
+  transform           : rotate(0deg);
+  width               : 100%;
+}
 .verificationsuccess {
   background-color    : rgba(251,251,251,1.0);
   display             : block;
@@ -255,23 +211,60 @@ a {
   opacity             : 0;
   transform           : translate(25px, 0);
 }
-.verificationsuccess .a-verification-code-will-be-sent-to-your-phone-gQnMA9 {
+.verificationsuccess .verification-succeed-EaABgQ {
   background-color    : rgba(255,255,255,0);
   color               : var(--auto-palette-color-1);
   flex-shrink         : 0;
-  font-family         : Source Sans Pro, Helvetica, Arial, serif;
-  font-size           : 15.0px;
-  font-style          : normal;
-  font-weight         : 400;
+  font-size           : 17.0px;
   height              : auto;
-  letter-spacing      : 0.00px;
-  line-height         : 25.6px;
-  margin-left         : -1.0px;
-  margin-top          : 4px;
-  min-height          : 46px;
-  opacity             : 0.5;
+  line-height         : 26.0px;
+  min-height          : 26px;
   position            : relative;
   text-align          : center;
+  transform           : rotate(0deg);
+  width               : 100%;
+}
+.verificationsuccess .ic-verified-user-24px-Cdlk2j {
+  align-items         : flex-end;
+  background-color    : rgba(255,255,255,0);
+  background-image    : url(".././img/verification-success-path@2x.png");
+  background-size     : 100% 100%;
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 64px;
+  justify-content     : flex-start;
+  opacity             : 0.3;
+  padding             : 2.0px 8.0px;
+  position            : absolute;
+  top                 : 60px;
+  transform           : rotate(0deg);
+  width               : auto;
+}
+.verificationsuccess .shape-qaNsel {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 59px;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : 48px;
+}
+.verificationsuccess .continuew-btn-90kEfx {
+  background-color    : rgba(255,255,255,0);
+  bottom              : 16px;
+  height              : 52px;
+  left                : 16px;
+  position            : absolute;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 32px);
+}
+.verificationsuccess .background-2YYu7L {
+  background-color    : var(--auto-palette-color-3);
+  border-radius       : 5.0px;
+  height              : 100%;
+  left                : 0px;
+  position            : absolute;
+  top                 : 0px;
   transform           : rotate(0deg);
   width               : 100%;
 }
@@ -289,16 +282,23 @@ a {
   transform           : rotate(0deg);
   width               : calc(100.00% - 32px);
 }
-.verificationsuccess .u21b3-value-7VR4xT {
+.verificationsuccess .a-verification-code-will-be-sent-to-your-phone-gQnMA9 {
   background-color    : rgba(255,255,255,0);
-  color               : var(--auto-palette-color-2);
+  color               : var(--auto-palette-color-1);
+  flex-shrink         : 0;
+  font-family         : Source Sans Pro, Helvetica, Arial, serif;
   font-size           : 15.0px;
+  font-style          : normal;
+  font-weight         : 400;
   height              : auto;
-  left                : 0px;
-  line-height         : 26.0px;
-  position            : absolute;
+  letter-spacing      : 0.00px;
+  line-height         : 25.6px;
+  margin-left         : -1.0px;
+  margin-top          : 4px;
+  min-height          : 46px;
+  opacity             : 0.5;
+  position            : relative;
   text-align          : center;
-  top                 : 12px;
   transform           : rotate(0deg);
   width               : 100%;
 }

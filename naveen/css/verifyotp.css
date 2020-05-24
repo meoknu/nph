@@ -143,49 +143,6 @@ a {
     transform           : translate(0,0);
   }
 }
-.verifyotp .verification-number-ppk0VD {
-  align-items         : flex-start;
-  background-color    : rgba(255,255,255,0);
-  box-sizing          : border-box;
-  display             : inline-flex;
-  flex-direction      : row;
-  height              : 56px;
-  justify-content     : flex-start;
-  position            : absolute;
-  top                 : 156px;
-  transform           : rotate(0deg);
-  width               : auto;
-}
-.verifyotp .verification-number-4-yuhCoW {
-  align-items         : flex-start;
-  background-color    : rgba(255,255,255,0);
-  background-image    : url(".././img/verifyotp-shape-1@2x.png");
-  background-size     : 100% 100%;
-  border-radius       : 6.0px;
-  box-sizing          : border-box;
-  display             : inline-flex;
-  flex-direction      : row;
-  flex-shrink         : 0;
-  height              : 56px;
-  justify-content     : flex-start;
-  margin-left         : 14px;
-  overflow            : hidden;
-  padding             : 13.0px 17.0px;
-  position            : relative;
-  transform           : rotate(0deg);
-  width               : 56px;
-}
-.verifyotp .u21b3-value-OuKIgg {
-  background-color    : rgba(255,255,255,0);
-  color               : var(--auto-palette-color-1);
-  flex-shrink         : 0;
-  height              : auto;
-  min-height          : 26px;
-  position            : relative;
-  text-align          : center;
-  transform           : rotate(0deg);
-  width               : 22px;
-}
 .verifyotp .a-verification-code-will-be-sent-to-your-phone-yfQWVM {
   background-color    : rgba(255,255,255,0);
   color               : var(--auto-palette-color-1);
@@ -235,64 +192,6 @@ a {
   transform           : rotate(0deg);
   width               : 22px;
 }
-.verifyotp {
-  background-color    : rgba(251,251,251,1.0);
-  display             : block;
-  height              : 100vh;
-  margin              : 0px;
-  min-height          : 358.0px;
-  min-width           : 320.0px;
-  overflow            : hidden;
-  position            : relative;
-  width               : 100%;
-  opacity             : 0;
-  transform           : translate(25px, 0);
-}
-.verifyotp.anima-animate-enter {
-  animation           : anima-animate-enter-frames 0.20s ease-in-out 0.00s 1 normal forwards;
-  display             : block;
-  opacity             : 0;
-  transform           : translate(25px, 0);
-}
-.verifyotp .shape-iU2GPq {
-  background-color    : rgba(255,255,255,0);
-  flex-shrink         : 0;
-  height              : 16px;
-  position            : relative;
-  transform           : rotate(-180deg);
-  width               : 16px;
-}
-.verifyotp .arrow-new-04vE3M {
-  align-items         : flex-start;
-  background-color    : rgba(255,255,255,0);
-  box-sizing          : border-box;
-  cursor              : pointer;
-  display             : inline-flex;
-  flex-direction      : row;
-  height              : 16px;
-  justify-content     : flex-start;
-  left                : 16px;
-  position            : absolute;
-  top                 : 16px;
-  transform           : rotate(-270deg);
-  width               : auto;
-}
-.verifyotp .verification-number-1-wLxYbA {
-  align-items         : center;
-  background-color    : var(--auto-palette-color-3);
-  border-radius       : 6.0px;
-  box-sizing          : border-box;
-  display             : inline-flex;
-  flex-direction      : row;
-  flex-shrink         : 0;
-  height              : 52px;
-  justify-content     : flex-start;
-  overflow            : hidden;
-  padding             : 0 15.0px;
-  position            : relative;
-  transform           : rotate(0deg);
-  width               : 52px;
-}
 .verifyotp .u21b3-value-aA57bE {
   background-color    : rgba(255,255,255,0);
   color               : var(--auto-palette-color-2);
@@ -324,18 +223,74 @@ a {
   transform           : rotate(0deg);
   width               : 100%;
 }
-.verifyotp .u21b3-value-7VR4xT {
+.verifyotp .arrow-new-04vE3M {
+  align-items         : flex-start;
   background-color    : rgba(255,255,255,0);
-  color               : var(--auto-palette-color-2);
-  font-size           : 15.0px;
-  height              : auto;
-  left                : 0px;
-  line-height         : 26.0px;
+  box-sizing          : border-box;
+  cursor              : pointer;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 16px;
+  justify-content     : flex-start;
+  left                : 16px;
   position            : absolute;
-  text-align          : center;
-  top                 : 12px;
-  transform           : rotate(0deg);
+  top                 : 16px;
+  transform           : rotate(-270deg);
+  width               : auto;
+}
+.verifyotp {
+  background-color    : rgba(251,251,251,1.0);
+  display             : block;
+  height              : 100vh;
+  margin              : 0px;
+  min-height          : 358.0px;
+  min-width           : 320.0px;
+  overflow            : hidden;
+  position            : relative;
   width               : 100%;
+  opacity             : 0;
+  transform           : translate(25px, 0);
+}
+.verifyotp.anima-animate-enter {
+  animation           : anima-animate-enter-frames 0.20s ease-in-out 0.00s 1 normal forwards;
+  display             : block;
+  opacity             : 0;
+  transform           : translate(25px, 0);
+}
+.verifyotp .shape-iU2GPq {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 16px;
+  position            : relative;
+  transform           : rotate(-180deg);
+  width               : 16px;
+}
+.verifyotp .u21b3-value-k5nlxy {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  flex-shrink         : 0;
+  height              : auto;
+  min-height          : 26px;
+  position            : relative;
+  text-align          : center;
+  transform           : rotate(0deg);
+  width               : 22px;
+}
+.verifyotp .verification-number-1-wLxYbA {
+  align-items         : center;
+  background-color    : var(--auto-palette-color-3);
+  border-radius       : 6.0px;
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  flex-shrink         : 0;
+  height              : 52px;
+  justify-content     : flex-start;
+  overflow            : hidden;
+  padding             : 0 15.0px;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : 52px;
 }
 .verifyotp .verification-number-2-Ro5B45 {
   align-items         : flex-start;
@@ -356,16 +311,18 @@ a {
   transform           : rotate(0deg);
   width               : 57px;
 }
-.verifyotp .u21b3-value-k5nlxy {
+.verifyotp .u21b3-value-7VR4xT {
   background-color    : rgba(255,255,255,0);
-  color               : var(--auto-palette-color-1);
-  flex-shrink         : 0;
+  color               : var(--auto-palette-color-2);
+  font-size           : 15.0px;
   height              : auto;
-  min-height          : 26px;
-  position            : relative;
+  left                : 0px;
+  line-height         : 26.0px;
+  position            : absolute;
   text-align          : center;
+  top                 : 12px;
   transform           : rotate(0deg);
-  width               : 22px;
+  width               : 100%;
 }
 .verifyotp .verification-number-3-fxnyt1 {
   align-items         : flex-start;
@@ -385,4 +342,47 @@ a {
   position            : relative;
   transform           : rotate(0deg);
   width               : 57px;
+}
+.verifyotp .verification-number-ppk0VD {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 56px;
+  justify-content     : flex-start;
+  position            : absolute;
+  top                 : 156px;
+  transform           : rotate(0deg);
+  width               : auto;
+}
+.verifyotp .verification-number-4-yuhCoW {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  background-image    : url(".././img/verifyotp-shape-1@2x.png");
+  background-size     : 100% 100%;
+  border-radius       : 6.0px;
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  flex-shrink         : 0;
+  height              : 56px;
+  justify-content     : flex-start;
+  margin-left         : 14px;
+  overflow            : hidden;
+  padding             : 13.0px 17.0px;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : 56px;
+}
+.verifyotp .u21b3-value-OuKIgg {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  flex-shrink         : 0;
+  height              : auto;
+  min-height          : 26px;
+  position            : relative;
+  text-align          : center;
+  transform           : rotate(0deg);
+  width               : 22px;
 }

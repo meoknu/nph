@@ -124,7 +124,7 @@ a {
   line-height         : 26.0px;
 }
 .font-class-2 {
-  font-family         : Nunito Sans, Helvetica, Arial, serif;
+  font-family         : "Nunito Sans", Helvetica, Arial, serif;
   font-style          : normal;
   font-weight         : 600;
 }
@@ -286,7 +286,7 @@ a {
   background-color    : rgba(255,255,255,0);
   color               : var(--auto-palette-color-1);
   flex-shrink         : 0;
-  font-family         : Source Sans Pro, Helvetica, Arial, serif;
+  font-family         : "Source Sans Pro", Helvetica, Arial, serif;
   font-size           : 15.0px;
   font-style          : normal;
   font-weight         : 400;

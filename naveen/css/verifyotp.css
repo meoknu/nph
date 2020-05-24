@@ -124,8 +124,8 @@ a {
   line-height         : 26.0px;
 }
 .font-class-2 {
-  font-family         : Nunito Sans, Helvetica, Arial, serif;
-  font-style          : normal;
+  font-family: "Nunito Sans", Helvetica, Arial, serif;
+  font-style: normal;
   font-weight         : 600;
 }
 :root {

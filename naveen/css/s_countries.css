@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:600');
 html, body {
-  /* width: 100%;
-  height: 100vh; */
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .s_countries {
   width               : 100%;

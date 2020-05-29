@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:600');
-html, body {
-  overflow-x: hidden;
-}
+
+
 .anima-overlay {
   position            : absolute;
   opacity             : 0;
@@ -604,6 +603,13 @@ div {
   {
       opacity: 1;
     }
+}
+.error_message{
+  color: #f44336;
+  font-size: 15px;
+  text-transform: capitalize;
+  position: absolute;
+  top: 35px;
 }
 .anima-component-wrapper,
 .anima-component-wrapper * {

@@ -9,23 +9,23 @@
     <meta content="AnimaApp.com - Design to code, Automated." name="author">
     </meta>
     <style>
-       .r3{
-        border: 0;
-    padding-left: 7px;
-    font-weight: bold;
-    font-size: 13px;
-    color: #fff;
-    background: #fe8e5d;
-    }
-.r1{
-    border: 0;
-    padding-left: 7px;
-    font-weight: bold;
-    font-size: 13px;
-    color: #000;
-    background: #fff;  
-}
-    
+        .r3 {
+            border: 0;
+            padding-left: 7px;
+            font-weight: bold;
+            font-size: 13px;
+            color: #fff;
+            background: #fe8e5d;
+        }
+
+        .r1 {
+            border: 0;
+            padding-left: 7px;
+            font-weight: bold;
+            font-size: 13px;
+            color: #000;
+            background: #fff;
+        }
     </style>
 </head>
 
@@ -51,27 +51,27 @@
                 <div class="verification-number-1-wLxYbA anima-flexbox-container">
                     <div class="u21b3-value-aA57bE font-class-1">
 
-                        <input id="num1" name="num1" value="" maxlength="1" class="r3" />
+                        <input type="text" id="num1" name="code[]" maxlength="1" class=r3 />
                     </div>
                 </div>
                 <div class="verification-number-2-Ro5B45 anima-flexbox-container">
                     <div class="u21b3-value-k5nlxy font-class-1">
 
-                        <input id="num2" name="num2" value="" maxlength="1" class="r1" />
+                        <input type="text" id="num2" name="code[]" maxlength="1" class=r1 />
                     </div>
                 </div>
                 <div class="verification-number-3-fxnyt1 anima-flexbox-container">
                     <div class="u21b3-value-CDdDTa font-class-1">
 
-                        <input id="num3" name="num3" value="" maxlength="1" class="r1" />
+                        <input type="text" id="num3" name="code[]" maxlength="1" class=r1 />
                     </div>
                 </div>
                 <div class="verification-number-4-yuhCoW anima-flexbox-container">
                     <div class="u21b3-value-OuKIgg font-class-1">
 
-                        <input id="num4" name="num4" value="" maxlength="1" class="r1" />
+                        <input type="text" id="num4" name="code[]" maxlength="1" class=r1 />
                     </div>
-                </div>   
+                </div>
             </div>
             <span id="message" style="    position: absolute;
             top: 37%;
@@ -90,6 +90,7 @@
         </a>
     </div>
     <!-- Scripts -->
+
     <script>
         function AnimaShowOnScroll() {
             this.toShow = [];
@@ -182,6 +183,9 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script>
+
+
+
         verifyOTP = () => {
 
             var otp1 = document.getElementById("num1").value
@@ -200,7 +204,7 @@
 
             sendOTP = (a, b, c, d) => {
                 console.log(a, b, c, d, 'a')
-               var url = 'http://165.22.218.93:8000/api/v1/verify_phone/';
+                var url = 'http://165.22.218.93:8000/api/v1/verify_phone/';
                 var mob_no = localStorage.getItem("mobkey");
                 var data = a + b + c + d
                 console.log(data, mob_no)
@@ -210,11 +214,11 @@
                     if (response) {
                         localStorage.removeItem("mobkey");
                         window.location.href = 'verificationsuccess.html';
-                        
+
                     }
 
                 }, (error, status, config) => {
-                   document.getElementById("message").innerHTML= "**OTP wrong"
+                    document.getElementById("message").innerHTML = "**OTP wrong"
                     console.log(error)
                 }
                 );

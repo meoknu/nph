@@ -8,7 +8,9 @@
     <link href="./css/verifyotp.css" rel="stylesheet" type="text/css" />
     <meta content="AnimaApp.com - Design to code, Automated." name="author">
     </meta>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <style>
+<<<<<<< HEAD
         .r3 {
             border: 0;
             padding-left: 7px;
@@ -26,6 +28,57 @@
             color: #000;
             background: #fff;
         }
+=======
+       .r3{
+        border: 0;
+    padding-left: 7px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff;
+    background: #fe8e5d;
+    }
+.r1{
+    border: 0;
+    padding-left: 7px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #000;
+    background: #fff;  
+}
+    .otp{
+        display:inline-block;
+        list-style-type: none; 
+        padding-left: 0;
+    }
+    .inputs{
+        width: 40px;
+    border: 0;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #fe8e5d;
+    text-align: center;
+    box-shadow: 0px 1px 10px 3px #8080803b;
+    }
+    .in2{
+        color: #000;
+    margin-left: 8px;
+    background-color: #FFF;
+    box-shadow: 0px 1px 10px 3px #8080803b;
+    }
+    .in3{
+        color: #000;
+    margin-left: 8px;
+    background-color: #FFF;
+    box-shadow: 0px 1px 10px 3px #8080803b;
+    }
+    .in4{
+        color: #000;
+    margin-left: 8px;
+    background-color: #FFF;
+    box-shadow: 0px 1px 10px 3px #8080803b;
+    }
+>>>>>>> acf26984bf0e34dda3961a5589440a9183fa6b2c
     </style>
 </head>
 
@@ -47,31 +100,61 @@
             </div>
         </div>
         <div class="anima-container-center-horizontal ">
-            <div class="verification-number-ppk0VD anima-flexbox-container">
+            <!-- <div class="verification-number-ppk0VD anima-flexbox-container focus">
                 <div class="verification-number-1-wLxYbA anima-flexbox-container">
                     <div class="u21b3-value-aA57bE font-class-1">
 
+<<<<<<< HEAD
                         <input type="text" id="num1" name="code[]" maxlength="1" class=r3 />
+=======
+                        <input id="num1" name="num1" value="" maxlength="1" class="r3 inputs" />
+>>>>>>> acf26984bf0e34dda3961a5589440a9183fa6b2c
                     </div>
                 </div>
                 <div class="verification-number-2-Ro5B45 anima-flexbox-container">
                     <div class="u21b3-value-k5nlxy font-class-1">
 
+<<<<<<< HEAD
                         <input type="text" id="num2" name="code[]" maxlength="1" class=r1 />
+=======
+                        <input id="num2" name="num2" value="" maxlength="1" class="r1 inputs" />
+                     
+>>>>>>> acf26984bf0e34dda3961a5589440a9183fa6b2c
                     </div>
                 </div>
                 <div class="verification-number-3-fxnyt1 anima-flexbox-container">
                     <div class="u21b3-value-CDdDTa font-class-1">
+<<<<<<< HEAD
 
                         <input type="text" id="num3" name="code[]" maxlength="1" class=r1 />
+=======
+                        <input id="num3" name="num3" value="" maxlength="1" class="r1 inputs" />
+>>>>>>> acf26984bf0e34dda3961a5589440a9183fa6b2c
                     </div>
                 </div>
                 <div class="verification-number-4-yuhCoW anima-flexbox-container">
                     <div class="u21b3-value-OuKIgg font-class-1">
 
+<<<<<<< HEAD
                         <input type="text" id="num4" name="code[]" maxlength="1" class=r1 />
                     </div>
                 </div>
+=======
+                        <input id="num4" name="num4" value="" maxlength="1" class="r1 inputs" />
+                    </div>
+                </div>   
+            
+            </div> -->
+            <div class="verification-number-ppk0VD anima-flexbox-container focus">
+                <ul class="otp">
+                    <li>
+                        <input id="num1" name="num1" value="" maxlength="1" class="in1 inputs" />
+                        <input id="num2" name="num2" value="" maxlength="1" class="in2 inputs" />
+                        <input id="num3" name="num3" value="" maxlength="1" class="in3 inputs" />
+                        <input id="num4" name="num4" value="" maxlength="1" class="in4 inputs" />
+                    </li>
+                </ul>
+>>>>>>> acf26984bf0e34dda3961a5589440a9183fa6b2c
             </div>
             <span id="message" style="    position: absolute;
             top: 37%;
@@ -92,6 +175,28 @@
     <!-- Scripts -->
 
     <script>
+           $(".inputs").keyup(function () {
+    if (this.value.length == this.maxLength) {
+      $(this).next('.inputs').focus();
+    }
+
+});
+var $inp = $(".inputs");
+
+$inp.on({
+ input: function(ev) {
+  if(this.value) {
+    $inp.eq($inp.index(this) + 1).focus();
+  }
+ },
+ keydown: function(ev) {
+  var i = $inp.index(this);
+  if(ev.which===8 && !this.value && i) {
+    $inp.eq(i - 1).focus();
+  }
+ }
+});
+  
         function AnimaShowOnScroll() {
             this.toShow = [];
             this.nextEventY = undefined;

@@ -152,7 +152,7 @@
             var localvalue = concode + mob;
             localStorage.setItem("mobkey", localvalue);
             console.log(a, concode);
-            if (a == "") {
+            if (mob == "") {
                 document.getElementById("message").innerHTML = "** please fill this mobile number";
                 return false;
             }
@@ -411,7 +411,7 @@
                 }, (error, status, config) => {
                     console.log(status, 'status')
                     console.log(error)
-                    alert(status)
+                    document.getElementById("message").innerHTML = "** please fill valid mobile number";
                 }
                 );
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
 <head>
     <link href="./img/favicon.png" rel="shortcut icon" />
@@ -8,10 +8,11 @@
     <link href="./css/welcome.css" rel="stylesheet" type="text/css" />
     <meta content="AnimaApp.com - Design to code, Automated." name="author">
     </meta>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
 </head>
 
 <body style="margin: 0;
- background: rgba(251, 251, 251, 1.0);" ng-app="myApp" ng-controller="myController">
+ background: rgba(251, 251, 251, 1.0);" ng-controller="myController">
     <input id="anPageName" name="page" type="hidden" value="welcome" />
     <div anima-show-on-scroll="" class="welcome anima-animate-enter1 anima-screen ">
         <div class="group-xWfRCW">
@@ -47,21 +48,22 @@
         <div class="btn-JhT9Tj">
             <div class="rectangle-aoiKmm">
             </div>
-            <div class="continue-ZxJawc" onclick="sendName()">
+            <div class="continue-ZxJawc" onclick="welcomeName()">
                 Continue
             </div>
         </div>
     </div>
     <script>
-        function sendName() {
-            var fName = document.getElementById('name_input')
+
+        function welcomeName() {
+            var fName = document.getElementById('name_input').value
             var name = fName.value
             console.log(name);
-            sendFullName(name)
-
+            NameWelcome(fName)
         }
+
     </script>
-    <!-- Scripts -->
+    <!-- Scripts "{" + JSON.stringify("email") + ":" + JSON.stringify(name) + "}" -->
     <script>
         function AnimaShowOnScroll() {
             this.toShow = [];
@@ -152,33 +154,37 @@
             animaShowOnScroll.init();
         }, 250);
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-    <script>
 
+
+    <script>
 
         var app = angular.module('myApp', []);
         app.controller('myController', function ($scope, $http, $sce) {
+            // $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+            //header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 
-            function sendFullName(name) {
+            NameWelcome = (name) => {
 
                 console.log(name, 'a')
                 var url = 'http://165.22.218.93:8000/api/v1/usercreate/';
                 var data = {
                     "email": name
                 }
-                console.log(data)
+                console.log(JSON.stringify(data))
 
-                $http.post('http://165.22.218.93:8000/api/v1/verify_phone/', JSON.stringify(data)).then((response, status, config) => {
+                $http.post('http://165.22.218.93:8000/api/v1/usercreate/', JSON.stringify(data)).then((response, status, config) => {
                     console.log(response)
                     if (response) {
-
+                        console.log(response)
+                        alert("saved")
 
                     }
 
                 }, (error, status, config) => {
 
                     console.log(error)
+                    alert("Not Saved / Already exist")
                 }
                 );
 

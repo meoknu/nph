@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  ng-app="myApp">
     <head>
         <link href="./img/favicon.png" rel="shortcut icon"/>
         <meta charset="utf-8"/>
@@ -8,8 +8,7 @@
         <meta content="AnimaApp.com - Design to code, Automated." name="author">
         </meta>
     </head>
-    <body style="margin: 0;
- background: rgba(251, 251, 251, 1.0);">
+    <body style="margin: 0; background: rgba(251, 251, 251, 1.0);" ng-controller="myController">
         <input id="anPageName" name="page" type="hidden" value="welcome"/>
         <div anima-show-on-scroll="" class="welcome anima-animate-enter1 anima-screen ">
             <div class="group-xWfRCW">
@@ -141,5 +140,14 @@
             }, 250);
         </script>
         <!-- End of Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script>
+             var app = angular.module('myApp', []);
+        app.controller('myController', function ($scope, $http) {
+             
+                console.log($scope);
+            });
+    
+    </script>
     </body>
 </html>

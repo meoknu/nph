@@ -14,6 +14,9 @@
     <meta content="AnimaApp.com - Design to code, Automated." name="author" />
 
     <script>
+        window.onload = function() {
+  var input = document.getElementById("fill").focus();
+}
         const user = localStorage.getItem("user");
         if (user) {
             window.location.href = 'chat.html';

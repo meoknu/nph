@@ -177,7 +177,10 @@
                     console.log(response)
                     if (response) {
                         console.log(response)
-                        alert("saved")
+                        const token = name
+                        localStorage.setItem("user", token);
+                        //alert("saved")
+                        window.location.href = 'chat.html';
 
                     }
 

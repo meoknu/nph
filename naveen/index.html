@@ -14,10 +14,17 @@
     <meta content="AnimaApp.com - Design to code, Automated." name="author" />
 
     <script>
+        const user = localStorage.getItem("user");
+        if (user) {
+            window.location.href = 'chat.html';
+        }
     </script>
 </head>
 
 <body style="margin: 0;background: rgba(251, 251, 251, 1.0);" ng-controller="myController">
+
+
+
     <input id="anPageName" name="page" type="hidden" value="index" />
     <div class="index anima-word-break ">
         <div style="width: 100%; height: 100%; position:relative; margin:auto;">
@@ -151,7 +158,7 @@
             var localvalue = concode + mob;
             localStorage.setItem("mobkey", localvalue);
             console.log(a, concode);
-            if (a == "") {
+            if (mob == "") {
                 document.getElementById("message").innerHTML = "** please fill this mobile number";
                 return false;
             }
@@ -410,6 +417,7 @@
                 }, (error, status, config) => {
                     console.log(status, 'status')
                     console.log(error)
+                    document.getElementById("message").innerHTML = "** please fill valid mobile number";
                 }
                 );
 

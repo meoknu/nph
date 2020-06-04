@@ -162,6 +162,9 @@
     <!-- Scripts -->
 
     <script>
+        window.onload = function() {
+     var input = document.getElementById("num1").focus();
+}
         $(".inputs").keyup(function () {
             if (this.value.length == this.maxLength) {
                 $(this).next('.inputs').focus();

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <link href="./img/favicon.png" rel="shortcut icon" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+    <link href="./css/welcome.css" rel="stylesheet" type="text/css" />
+    <meta content="AnimaApp.com - Design to code, Automated." name="author">
+    </meta>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <style>
+   ul{
+       padding-left: 0;
+   }
+   .time{
+       color: #a09595 !important;
+   }
+    ul li{
+  
+    list-style-type: none ;
+    display: inline;
+    }
+    .search{
+        float: right;
+    }
+    .mess{
+        width: 100%;
+        text-align: center;
+        font-size: 1.0rem;
+        font-weight: 600;
+    }
+    .img_box{
+    background: #9e9e9e26;
+    width: 65px;
+    height:65px;
+    border-radius: 50%;
+    position: relative;
+    border-radius: 50%;
+    top: 8px;
+    }
+    .chat {
+  text-align: justify;
+  padding:10px;
+}
+
+.chat > div {
+    display: inline-block;
+    line-height: 30px;
+    color: #161414;
+}
+.chat:after {
+  content: " ";
+  display: inline-block;
+  width: 100%;
+}
+.chat_1 {
+    text-align: justify;
+    border: 1px solid #00000017;
+    height: 15vh;
+    margin: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+}
+
+.chat_1 > div {
+    vertical-align: middle;
+    display: inline-block;
+    color: #161414;
+    
+}
+.chat_1:after {
+  content: " ";
+  display: inline-block;
+  width: 100%;
+}
+.box-b1 h3,p{
+    margin-bottom: 7px;
+    margin-top: 15px;
+    line-height: 15px;
+
+}
+.box-b{
+    font-size: 18px;
+    color:#161414bf;
+    font-weight: 600;
+}
+.box-b1{
+    line-height: 15px;
+    width: 55%;
+    margin-left: -10px;
+}
+.box-b1 p{
+    color: #a09595;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.box-b1 h3{
+    color: #252837;
+    font-size: 16px;
+}
+    </style>
+</head>
+
+<body style="margin: 0;
+ background: rgba(251, 251, 251, 1.0);" ng-controller="myController">
+    <input id="anPageName" name="page" type="hidden" value="welcome" />
+          <div class="chat_screen">
+            <div class="chat">
+                <div class="box-a"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
+                <div class="box-b">Message</div>
+                <div class="box-c"><i class="fa fa-search"></i></div>
+              </div>
+         <div class="chat_ui">
+          <div class="user"> 
+            <div class="chat_1">
+                <div class="box-a"><div class="img_box"></div></div>
+                <div class="box-b1"><h3>Harsh Vijay</h3>
+                <p>
+                    Hey ,how are you.behind the word mountain
+                </p>
+                </div>
+                <div class="time">17:56</div>
+              </div>
+          </div>
+         </div>
+         <div class="chat_ui">
+            <div class="user"> 
+              <div class="chat_1">
+                  <div class="box-a"><div class="img_box"></div></div>
+                  <div class="box-b1"><h3>Harsh Vijay</h3>
+                  <p>
+                      Hey ,how are you.behind the word mountain
+                  </p>
+                  </div>
+                  <div class="time">17:56</div>
+                </div>
+            </div>
+           </div>
+           <div class="chat_ui">
+            <div class="user"> 
+              <div class="chat_1">
+                  <div class="box-a"><div class="img_box"></div></div>
+                  <div class="box-b1"><h3>Harsh Vijay</h3>
+                  <p>
+                      Hey ,how are you.behind the word mountain
+                  </p>
+                  </div>
+                  <div class="time">17:56</div>
+                </div>
+            </div>
+           </div>
+           <div class="chat_ui">
+            <div class="user"> 
+              <div class="chat_1">
+                  <div class="box-a"><div class="img_box"></div></div>
+                  <div class="box-b1"><h3>Harsh Vijay</h3>
+                  <p>
+                      Hey ,how are you.behind the word mountain
+                  </p>
+                  </div>
+                  <div class="time">17:56</div>
+                </div>
+            </div>
+           </div>
+           <div class="chat_ui">
+            <div class="user"> 
+              <div class="chat_1">
+                  <div class="box-a"><div class="img_box"></div></div>
+                  <div class="box-b1"><h3>Harsh Vijay</h3>
+                  <p>
+                      Hey ,how are you.behind the word mountain
+                  </p>
+                  </div>
+                  <div class="time">17:56</div>
+                </div>
+            </div>
+           </div>
+    </div>
+
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myController', function ($scope, $http, $sce) {
+        
+        })
+    </script>
+</body>
+
+</html>

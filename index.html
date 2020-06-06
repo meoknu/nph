@@ -19,16 +19,13 @@
 }
         const user = localStorage.getItem("user");
         if (user) {
-            window.location.href = 'chat.html';
+         window.location.href = 'chat.html';
             console.log(user)
         }
     </script>
 </head>
 
-<body style="margin: 0;background: rgba(251, 251, 251, 1.0);" ng-controller="myController">
-
-
-
+<body style="margin: 0;background: rgba(251, 251, 251, 1.0);" ng-controller="myController">              
     <input id="anPageName" name="page" type="hidden" value="index" />
     <div class="index anima-word-break ">
         <div style="width: 100%; height: 100%; position:relative; margin:auto;">
@@ -135,7 +132,7 @@
                       src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
                 <div class="section1" id="countryList">
                     <div ng-repeat="country in countries" ng-class="{active : country.active}"
-                        ng-click="selectCountry(country)" ng-model="cont">
+                        ng-click="selectCountry(country)">
                         <img ng-src="http://www.geognos.com/api/en/countries/flag/{{country.code}}.png" alt=""
                             style="width: 22px;margin-right: 10px;">
                         <span style="flex-grow: 1;">{{country.Name}}</span>
@@ -383,15 +380,26 @@
             fetch('./countries.json').then(res => res.json()).then(res => {
                 // console.log(res);
                 $scope.countries = res;
-                var cont =res
-                for(i=0;i<cont.length;i++){
-                    console.log(cont[i])
-                    var b= cont[i]
-                    console.log(b)
+               
+        $http({
+        method: 'GET',
+        url: 'http://165.22.218.93:8000/api/v1/getlocations/'
+        }).then(function successCallback(location) {
+            console.log(location.data.country)
+        var locate=location.data.country
+             for(i=0;i<res.length;i++){     
+                  console.log(res[i].Name)   
+             var loc_name=res[i].Name  
+             if(loc_name==locate){
+               $scope.country=res[i]
+               console.log($scope.country)     
                 }
+                }
+           })
+               
                 $scope.country = res.find(country => country.code == 'IN');
                 $scope.country.active = true;
-                console.log($scope.country);
+                // console.log($scope.country);
                 $scope.$apply();
                 
             });

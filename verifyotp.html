@@ -18,10 +18,13 @@
             color: #fff;
             background: #fe8e5d;
         }
-        .colin:focus{
-  background-color:  #fe8e5d;
-  color: #fff;    /* oranges! yey */
-}
+
+        .colin:focus {
+            background-color: #fe8e5d;
+            color: #fff;
+            /* oranges! yey */
+        }
+
         .r1 {
             border: 0;
             padding-left: 7px;
@@ -162,9 +165,9 @@
     <!-- Scripts -->
 
     <script>
-        window.onload = function() {
-     var input = document.getElementById("num1").focus();
-}
+        window.onload = function () {
+            var input = document.getElementById("num1").focus();
+        }
         $(".inputs").keyup(function () {
             if (this.value.length == this.maxLength) {
                 $(this).next('.inputs').focus();
@@ -291,7 +294,7 @@
             sendOTP(otp1, otp2, otp3, otp4)
         }
     </script>
-
+    <script src="config.js"></script>
     <script>
         var app = angular.module('myApp', []);
         app.controller('myController', function ($scope, $http, $sce) {
@@ -299,17 +302,21 @@
 
             sendOTP = (a, b, c, d) => {
                 console.log(a, b, c, d, 'a')
-                var url = 'http://165.22.218.93:8000/api/v1/verify_phone/'
+                
                 var mob_no = localStorage.getItem("mobkey");
                 var data = a + b + c + d;
                 console.log(data, mob_no)
 
-                $http.post('http://165.22.218.93:8000/api/v1/verify_phone/' + mob_no + '/' + data + '/')
+                $http.post(server_url+'/api/user/login', {
+                    mobile_number: mob_no,
+                    otp: data
+                })
                     .then((response, status, config) => {
                         console.log(response)
                         if (response) {
                             localStorage.removeItem("mobkey");
 
+                            localStorage.setItem("user", true);
                             window.location.href = 'verificationsuccess.html';
 
                         }

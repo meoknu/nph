@@ -1,0 +1,105 @@
+<!-- for non-UI builds: -->
+<script src="https://ajax.googleapis.com/ajax/libs/shaka-player/3.0.1/shaka-player.compiled.js"></script>
+<!-- or, for UI builds: -->
+<script src="https://ajax.googleapis.com/ajax/libs/shaka-player/3.0.1/shaka-player.ui.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/shaka-player/3.0.1/controls.css">
+<pre>
+
+    ./bento4/bin/mp4dash -o ./static/media ./static/sample.fragmented.mp4
+
+    ./bento4/bin/mp4dash --encryption-key=abba85a5ddab79b2a50b9555a6006241:ae638dc8e639099aa6eb346783c7d87a -o ./static/enc_media ./static/sample.fragmented.mp4
+
+</pre>
+
+<video id="video" controls autoplay></video>
+
+<pre>
+
+    <label for="isEncrypted">
+        <input type="checkbox" id="isEncrypted"> Enable Decryption
+    </label>
+
+    <button onclick="pEA()">Play Encrypted Audio</button>
+
+    <button onclick="pV()">Play Video</button>
+
+    <button onclick="pEV()">Play Encrypted Video</button>
+
+    <button onclick="pPA()">Play Prashant Audio</button>
+</pre>
+
+<script>
+    var manifestUri =
+        'enc_media_audio/stream.mpd';
+
+    function pEA() {
+        manifestUri = 'enc_media_audio/stream.mpd';
+        initApp();
+    }
+    function pV() {
+        manifestUri = 'media/stream.mpd';
+        initApp();
+    }
+    function pEV() {
+        manifestUri = 'enc_media/stream.mpd';
+        initApp();
+    }
+    function pPA() {
+        manifestUri = 'prashant/stream.mpd';
+        initApp();
+    }
+    function initApp() {
+        // Install built-in polyfills to patch browser incompatibilities.
+        shaka.polyfill.installAll();
+
+        // Check to see if the browser supports the basic APIs Shaka needs.
+        if (shaka.Player.isBrowserSupported()) {
+            // Everything looks good!
+            initPlayer();
+        } else {
+            // This browser does not have the minimum set of APIs we need.
+            console.error('Browser not supported!');
+        }
+    }
+
+    function initPlayer() {
+        // Create a Player instance.
+        var video = document.getElementById('video');
+        var player = new shaka.Player(video);
+
+        // Attach player to the window to make it easy to access in the JS console.
+        window.player = player;
+        if(document.getElementById('isEncrypted').checked) {
+            player.configure({
+                drm: {
+                    clearKeys: {
+                        // 'key-id-in-hex': 'key-in-hex',
+                        "7cd490d5870b6a83e207e7cf61b53127": "f1df9eb350015cb51a81ca107de5c360",
+                        "abba85a5ddab79b2a50b9555a6006241": "ae638dc8e639099aa6eb346783c7d87a",
+                    }
+                }
+            });
+        }
+        // Listen for error events.
+        player.addEventListener('error', onErrorEvent);
+
+        // Try to load a manifest.
+        // This is an asynchronous process.
+        player.load(manifestUri).then(function () {
+            // This runs if the asynchronous load is successful.
+            console.log('The video has now been loaded!');
+        }).catch(onError);  // onError is executed if the asynchronous load fails.
+    }
+
+    function onErrorEvent(event) {
+        // Extract the shaka.util.Error object from the event.
+        onError(event.detail);
+    }
+
+    function onError(error) {
+        // Log the error.
+        console.error('Error code', error.code, 'object', error);
+    }
+
+    // document.addEventListener('DOMContentLoaded', initApp);
+</script>

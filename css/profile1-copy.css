@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,600');
+
+
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  animation-delay     : 0s;
+}
+@keyframes anima-reveal {
+  from {
+    opacity             : 0;
+  }
+  to {
+    opacity             : 1;
+  }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events      : none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events      : auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility          : hidden;
+  pointer-events      : none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events      : auto;
+  visibility          : visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility          : hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor              : pointer;
+}
+.anima-component-wrapper a,
+.anima-screen a {
+  text-decoration     : none;
+}
+.anima-flexbox-container a {
+  line-height         : 0;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+.anima-screen textarea:focus,
+.anima-screen input:focus {
+  outline             : none;
+}
+.anima-screen div {
+  -webkit-text-size-adjust: none;
+}
+.anima-container-center-vertical,
+.anima-container-center-horizontal {
+  pointer-events      : none;
+  display             : flex;
+  flex-direction      : row;
+  padding             : 0;
+  margin              : 0;
+}
+.anima-container-center-vertical {
+  align-items         : center;
+  height              : 100%;
+}
+.anima-container-center-horizontal {
+  justify-content     : center;
+  width               : 100%;
+}
+.anima-container-center-vertical > *,
+.anima-container-center-horizontal > * {
+  pointer-events      : auto;
+  flex-shrink         : 0;
+}
+.anima-component-wrapper ,
+.anima-screen {
+  overflow-wrap       : break-word;
+  word-wrap           : break-word;
+  word-break          : break-all;
+  word-break          : break-word;
+}
+.anima-auto-animated div {
+  opacity             : 0;
+  position            : absolute;
+  --anima-z-index: -1;
+}
+/* ANIMA screen - profile1copy */
+.font-class-1 {
+  font-family         : Nunito Sans, Helvetica, Arial, serif;
+  font-style          : normal;
+  font-weight         : 600;
+}
+.font-class-2 {
+  color               : var(--auto-palette-color-1);
+  font-family         : Nunito Sans, Helvetica, Arial, serif;
+  font-style          : normal;
+  font-weight         : 400;
+}
+:root {
+  --auto-palette-color-1: rgba(43,47,63,1.0);
+}
+.profile1copy .oval-6PdAgd {
+  background-color    : rgba(255,255,255,0);
+  height              : 100px;
+  left                : calc(50.00% - 50px);
+  position            : absolute;
+  top                 : 23px;
+  transform           : rotate(0deg);
+  width               : 100px;
+}
+.profile1copy .a3-Lda0GF {
+  background-color    : rgba(255,255,255,0);
+  background-image    : url(".././img/profile-1-copy-background-copy-1@2x.png");
+  background-size     : 100% 100%;
+  height              : 177px;
+  left                : 16px;
+  position            : absolute;
+  top                 : 344px;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 32px);
+}
+.profile1copy .olecon-u2019s-music-JXRINx {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  font-size           : 17.0px;
+  height              : auto;
+  left                : 16px;
+  line-height         : 14.0px;
+  position            : absolute;
+  text-align          : left;
+  top                 : 16px;
+  transform           : rotate(0deg);
+  width               : auto;
+}
+.profile1copy .a7-TyqUPE {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  flex-shrink         : 0;
+  font-size           : 13.0px;
+  height              : auto;
+  line-height         : 18.0px;
+  margin-left         : -2px;
+  min-height          : 18px;
+  opacity             : 0.6;
+  position            : relative;
+  text-align          : right;
+  transform           : rotate(0deg);
+  width               : 29px;
+}
+.profile1copy .arrow-4hlpN0 {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 13px;
+  margin-bottom       : 1.0px;
+  margin-left         : 12px;
+  opacity             : 0.3;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : 6px;
+}
+.profile1copy .a2-xYCueR {
+  background-color    : rgba(255,255,255,0);
+  height              : 45px;
+  left                : 16px;
+  position            : absolute;
+  top                 : 109px;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 16px);
+}
+.profile1copy .oval-mxWEdt {
+  background-color    : rgba(255,255,255,0);
+  height              : 45px;
+  left                : 0px;
+  position            : absolute;
+  top                 : 0px;
+  transform           : rotate(0deg);
+  width               : 45px;
+}
+.profile1copy .annie-tyler-ATdikM {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  font-size           : 15.0px;
+  height              : auto;
+  left                : 60px;
+  line-height         : 20.0px;
+  position            : absolute;
+  text-align          : left;
+  top                 : 3px;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 60px);
+}
+.profile1copy .senior-design-direct-zkdfVb {
+  background-color    : rgba(255,255,255,0);
+  font-size           : 13.0px;
+  height              : auto;
+  left                : 60px;
+  line-height         : 18.0px;
+  opacity             : 0.4;
+  position            : absolute;
+  text-align          : left;
+  top                 : 23px;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 60px);
+}
+.profile1copy .a2-JyeKHe {
+  background-color    : rgba(255,255,255,0);
+  height              : 45px;
+  left                : 16px;
+  position            : absolute;
+  top                 : 49px;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 16px);
+}
+.profile1copy .oval-nJS67W {
+  background-color    : rgba(255,255,255,0);
+  height              : 45px;
+  left                : 0px;
+  position            : absolute;
+  top                 : 0px;
+  transform           : rotate(0deg);
+  width               : 45px;
+}
+.profile1copy .annie-tyler-xXI9CK {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  font-size           : 15.0px;
+  height              : auto;
+  left                : 60px;
+  line-height         : 20.0px;
+  position            : absolute;
+  text-align          : left;
+  top                 : 3px;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 60px);
+}
+.profile1copy .senior-design-direct-OuYnxk {
+  background-color    : rgba(255,255,255,0);
+  font-size           : 13.0px;
+  height              : auto;
+  left                : 60px;
+  line-height         : 18.0px;
+  opacity             : 0.4;
+  position            : absolute;
+  text-align          : left;
+  top                 : 23px;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 60px);
+}
+.profile1copy .navigation-bar-3rBcVE {
+  background-color    : rgba(255,255,255,0);
+  height              : 88px;
+  left                : 0px;
+  position            : absolute;
+  top                 : 0px;
+  transform           : rotate(0deg);
+  width               : 327px;
+}
+.profile1copy .profile-hQ8hkS {
+  background-color    : rgba(255,255,255,0);
+  color               : rgba(34,37,51,1.0);
+  font-size           : 17.0px;
+  height              : auto;
+  line-height         : 23.0px;
+  position            : absolute;
+  text-align          : center;
+  top                 : 55px;
+  transform           : rotate(0deg);
+  width               : auto;
+}
+.profile1copy .back-HdT6cx {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 16px;
+  justify-content     : flex-start;
+  left                : 16px;
+  position            : absolute;
+  top                 : 58px;
+  transform           : rotate(-270deg);
+  width               : auto;
+}
+.profile1copy .group-cEWRRs {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  flex-shrink         : 0;
+  height              : 16px;
+  justify-content     : flex-start;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : auto;
+}
+.profile1copy .group-DfEOaS {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  flex-shrink         : 0;
+  height              : 16px;
+  justify-content     : flex-start;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : auto;
+}
+.profile1copy .shape-SOxy9S {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 16px;
+  position            : relative;
+  transform           : rotate(-180deg);
+  width               : 16px;
+}
+.profile1copy .settings-3akAjK {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 24px;
+  justify-content     : flex-start;
+  position            : absolute;
+  right               : 16px;
+  top                 : 54px;
+  transform           : rotate(0deg);
+  width               : auto;
+}
+.profile1copy .group-4HwGGm {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 24px;
+  position            : relative;
+  transform           : rotate(0deg);
+  width               : 24px;
+}
+.profile1copy .shape-KMUxya {
+  background-color    : rgba(255,255,255,0);
+  height              : 23px;
+  left                : 1px;
+  position            : absolute;
+  top                 : 1px;
+  transform           : rotate(0deg);
+  width               : 23px;
+}
+.profile1copy .shape-AYgiKo {
+  background-color    : rgba(255,255,255,0);
+  height              : 12px;
+  left                : 6px;
+  position            : absolute;
+  top                 : 6px;
+  transform           : rotate(0deg);
+  width               : 12px;
+}
+.profile1copy {
+  background-color    : rgba(251,251,251,1.0);
+  height              : 100vh;
+  margin              : 0px;
+  min-height          : 568.0px;
+  min-width           : 320.0px;
+  overflow            : hidden;
+  position            : relative;
+  width               : 100%;
+}
+.profile1copy .kyu-kisi-ko-wafa-k-u2026-tuFyKO {
+  background-color    : rgba(255,255,255,0);
+  font-size           : 20.0px;
+  height              : auto;
+  line-height         : 27.0px;
+  margin-left         : 0px;
+  position            : absolute;
+  text-align          : center;
+  top                 : 144px;
+  transform           : rotate(0deg);
+  width               : auto;
+}
+.profile1copy .excuse-me-kya-re-te-5LPVBl {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  font-size           : 13.0px;
+  height              : auto;
+  line-height         : 18.0px;
+  margin-left         : -0px;
+  opacity             : 0.4;
+  position            : absolute;
+  text-align          : center;
+  top                 : 181px;
+  transform           : rotate(0deg);
+  width               : auto;
+}
+.profile1copy .a1-7KJpQb {
+  background-color    : rgba(255,255,255,0);
+  background-image    : url(".././img/profile-1-copy-background-copy@2x.png");
+  background-size     : 100% 100%;
+  height              : 228px;
+  left                : 16px;
+  position            : absolute;
+  top                 : 104px;
+  transform           : rotate(0deg);
+  width               : calc(100.00% - 32px);
+}
+.profile1copy .group-2-jVZ2Gg {
+  align-items         : center;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 18px;
+  justify-content     : flex-start;
+  min-width           : 45px;
+  position            : absolute;
+  right               : 16px;
+  top                 : 16px;
+  transform           : rotate(0deg);
+  width               : auto;
+}

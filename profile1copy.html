@@ -10,7 +10,7 @@
     <meta content="website" property="og:type" />
     <!-- Twitter -->
     <meta content="photo" name="twitter:card" />
-    <link href="./css/profile1-copy.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="./css/profile1-copy.css" rel="stylesheet" type="text/css" /> -->
     <meta content="AnimaApp.com - Design to code, Automated." name="author">
     </meta>
 </head>
@@ -37,13 +37,13 @@
             <div class="olecon-u2019s-music-JXRINx font-class-1">
                 Olecon’s Music
             </div>
-            <div class="group-2-jVZ2Gg anima-flexbox-container">
+            <!-- <div class="group-2-jVZ2Gg anima-flexbox-container">
                 <div class="a7-TyqUPE font-class-1">
                     7
                 </div>
                 <img anima-src="./img/profile-1-copy-arrow@2x.png" class="arrow-4hlpN0"
                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
-            </div>
+            </div> -->
             <div class="a2-xYCueR">
                 <img anima-src="./img/profile-1-copy-oval-1@2x.png" class="oval-mxWEdt"
                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
@@ -64,7 +64,7 @@
                     Senior Design Director
                 </div>
             </div>
-            <div style="position: static;bottom: 0;z-index: 2;display:none;">
+            <div style="position: static;bottom: 0;z-index: 2;">
                 <div id='online-signal' style='width:640px;text-align:center'>Signal</div>
                 <span><button id="download-button">Download</button></span>
                 <div>
@@ -245,10 +245,10 @@
 
             // // Try to load a manifest.
             // // This is an asynchronous process.
-            // player.load(manifestUri).then(function () {
-            //     // This runs if the asynchronous load is successful.
-            //     console.log('The video has now been loaded!');
-            // }).catch(onError);  // onError is executed if the asynchronous load fails.
+            player.load(manifestUri).then(function () {
+                // This runs if the asynchronous load is successful.
+                console.log('The video has now been loaded!');
+            }).catch(onError);  // onError is executed if the asynchronous load fails.
         }
 
         function onErrorEvent(event) {

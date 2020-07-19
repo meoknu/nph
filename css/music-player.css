@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,600');
+
+
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  animation-delay     : 0s;
+}
+@keyframes anima-reveal {
+  from {
+    opacity             : 0;
+  }
+  to {
+    opacity             : 1;
+  }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events      : none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events      : auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility          : hidden;
+  pointer-events      : none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events      : auto;
+  visibility          : visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility          : hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor              : pointer;
+}
+.anima-component-wrapper a,
+.anima-screen a {
+  text-decoration     : none;
+}
+.anima-flexbox-container a {
+  line-height         : 0;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+.anima-screen textarea:focus,
+.anima-screen input:focus {
+  outline             : none;
+}
+.anima-screen div {
+  -webkit-text-size-adjust: none;
+}
+.anima-container-center-vertical,
+.anima-container-center-horizontal {
+  pointer-events      : none;
+  display             : flex;
+  flex-direction      : row;
+  padding             : 0;
+  margin              : 0;
+}
+.anima-container-center-vertical {
+  align-items         : center;
+  height              : 100%;
+}
+.anima-container-center-horizontal {
+  justify-content     : center;
+  width               : 100%;
+}
+.anima-container-center-vertical > *,
+.anima-container-center-horizontal > * {
+  pointer-events      : auto;
+  flex-shrink         : 0;
+}
+.anima-component-wrapper,
+.anima-screen {
+  overflow-wrap       : break-word;
+  word-wrap           : break-word;
+  word-break          : break-all;
+  word-break          : break-word;
+}
+.anima-auto-animated div {
+  opacity             : 0;
+  position            : absolute;
+  --anima-z-index: -1;
+}
+.anima-auto-animated .anima-container-center-vertical,
+.anima-auto-animated .anima-container-center-horizontal {
+  opacity             : 1;
+}
+/* ANIMA screen - musicplayer */
+.font-class-1 {
+  font-family         : Nunito Sans, Helvetica, Arial, serif;
+  font-weight         : 600;
+}
+:root {
+  --auto-palette-color-1: rgba(255,255,255,1.0);
+}
+.musicplayer .path-dzUsxO {
+  background-color    : rgba(255,255,255,0);
+  height              : 4px;
+  left                : 5px;
+  opacity             : 0.3;
+  position            : absolute;
+  top                 : 0px;
+  width               : 1px;
+}
+.musicplayer .path-ZvTMfb {
+  background-color    : rgba(255,255,255,0);
+  height              : calc(6.25% + 10px);
+  left                : 0px;
+  opacity             : 0.3;
+  position            : absolute;
+  top                 : 4px;
+  width               : 12px;
+}
+.musicplayer .title-i5ERWn {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : flex;
+  flex-direction      : column;
+  height              : auto;
+  justify-content     : flex-start;
+  left                : 62px;
+  position            : absolute;
+  top                 : 6px;
+  width               : 120px;
+}
+.musicplayer .various-artists-IHOPfm {
+  background-color    : rgba(255,255,255,0);
+  color               : rgba(37,40,55,1.0);
+  flex-shrink         : 0;
+  font-family         : Nunito Sans, Helvetica, Arial, serif;
+  font-size           : 13.0px;
+  font-weight         : 400;
+  height              : auto;
+  letter-spacing      : 0.00px;
+  line-height         : 18.0px;
+  margin-top          : 0px;
+  min-height          : 18px;
+  min-width           : 98px;
+  opacity             : 0.4;
+  position            : relative;
+  text-align          : left;
+  width               : auto;
+}
+.musicplayer .hanuman-chalisa-znzsxv {
+  background-color    : rgba(255,255,255,0);
+  color               : rgba(37,40,55,1.0);
+  flex-shrink         : 0;
+  font-size           : 15.0px;
+  height              : auto;
+  line-height         : 20.0px;
+  min-height          : 20px;
+  min-width           : 132px;
+  opacity             : 0.5;
+  position            : relative;
+  text-align          : left;
+  width               : auto;
+}
+.musicplayer .image-1xmbRW {
+  align-items         : flex-start;
+  background-color    : rgba(239,239,239,1.0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 51px;
+  justify-content     : flex-start;
+  left                : 0px;
+  overflow            : hidden;
+  position            : absolute;
+  top                 : 0px;
+  width               : 50px;
+}
+.musicplayer .virtual-hanuman-1-YD6G7W {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 50px;
+  margin-left         : -19px;
+  position            : relative;
+  width               : 74px;
+}
+.musicplayer .a1-MURDQB {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 51px;
+  position            : relative;
+  width               : 100%;
+}
+.musicplayer .rectangle-yNcs6B {
+  background-color    : rgba(255,142,93,1.0);
+  height              : 50px;
+  left                : 0px;
+  position            : absolute;
+  top                 : 0px;
+  width               : 100%;
+}
+.musicplayer .download-btn-Vf5t2f {
+  align-items         : center;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : flex;
+  flex-direction      : column;
+  height              : auto;
+  justify-content     : flex-start;
+  min-height          : 16px;
+  position            : absolute;
+  right               : 10px;
+  top                 : calc(50.00% - 8px);
+  width               : 12px;
+}
+.musicplayer .path-ZETeHd {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 11px;
+  margin-top          : 0px;
+  position            : relative;
+  width               : 12px;
+}
+.musicplayer .path-7qtF1r {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 4px;
+  margin-right        : 1.0px;
+  position            : relative;
+  width               : 1px;
+}
+.musicplayer .title-brCYu7 {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : flex;
+  flex-direction      : column;
+  height              : auto;
+  justify-content     : flex-start;
+  left                : 62px;
+  position            : absolute;
+  top                 : 6px;
+  width               : 120px;
+}
+.musicplayer .various-artists-wfZ7xt {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  flex-shrink         : 0;
+  font-family         : Nunito Sans, Helvetica, Arial, serif;
+  font-size           : 13.0px;
+  font-weight         : 400;
+  height              : auto;
+  letter-spacing      : 0.00px;
+  line-height         : 18.0px;
+  margin-top          : 0px;
+  min-height          : 18px;
+  min-width           : 98px;
+  opacity             : 0.4;
+  position            : relative;
+  text-align          : left;
+  width               : auto;
+}
+.musicplayer .hanuman-chalisa-DD23z2 {
+  background-color    : rgba(255,255,255,0);
+  color               : var(--auto-palette-color-1);
+  flex-shrink         : 0;
+  font-size           : 15.0px;
+  height              : auto;
+  line-height         : 20.0px;
+  min-height          : 20px;
+  min-width           : 132px;
+  position            : relative;
+  text-align          : left;
+  width               : auto;
+}
+.musicplayer .knob-line-zeqToa {
+  background-color    : rgba(255,142,93,1.0);
+  height              : 2px;
+  left                : 0px;
+  position            : absolute;
+  top                 : 8px;
+  width               : 93px;
+}
+.musicplayer .knob-GR3yHs {
+  background-color    : rgba(255,255,255,0);
+  height              : 24px;
+  left                : 93px;
+  position            : absolute;
+  top                 : 0px;
+  width               : 23px;
+}
+.musicplayer .a01-12-ennW0C {
+  background-color    : rgba(255,255,255,0);
+  color               : rgba(179,179,179,1.0);
+  font-size           : 10.0px;
+  height              : auto;
+  left                : 0px;
+  line-height         : 14.0px;
+  position            : absolute;
+  text-align          : center;
+  top                 : 2px;
+  width               : 35px;
+}
+.musicplayer .play-pause-btn-QZiFGy {
+  background-color    : rgba(255,255,255,0);
+  height              : 33px;
+  margin-left         : 1px;
+  margin-top          : -0px;
+  position            : absolute;
+  width               : 79px;
+}
+.musicplayer .play-skip-forward-MYlcHi {
+  background-color    : rgba(255,255,255,0);
+  background-image    : url(".././img/music-player-path-4@2x.png");
+  background-size     : 100% 100%;
+  height              : 13px;
+  position            : absolute;
+  right               : 0px;
+  top                 : 10px;
+  width               : 10px;
+}
+.musicplayer .pause-ah1sJx {
+  align-items         : flex-end;
+  background-color    : rgba(255,255,255,0);
+  background-image    : url(".././img/music-player-oval@2x.png");
+  background-size     : 100% 100%;
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 33px;
+  justify-content     : flex-start;
+  left                : calc(50.00% - 17px);
+  min-width           : 33px;
+  padding             : 8.0px 11.0px;
+  position            : absolute;
+  top                 : 0px;
+  width               : auto;
+}
+.musicplayer .path-tR4mxL {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 16px;
+  position            : relative;
+  width               : 4px;
+}
+.musicplayer .path-gTAxUD {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 16px;
+  margin-left         : 2px;
+  position            : relative;
+  width               : 4px;
+}
+.musicplayer .play-skip-back-ZxVxHw {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 13px;
+  justify-content     : flex-start;
+  left                : 0px;
+  position            : absolute;
+  top                 : 10px;
+  width               : auto;
+}
+.musicplayer .virtual-hanuman-1-1ONKdH {
+  background-color    : rgba(0,0,0,1.0);
+  border-radius       : 8.0px;
+  height              : 100%;
+  left                : 0px;
+  overflow            : hidden;
+  position            : relative;
+  top                 : 0px;
+  width               : 100%;
+}
+.musicplayer {
+  background-color    : rgba(251,251,251,1.0);
+  height              : 100vh;
+  margin              : 0px;
+  min-height          : 568.0px;
+  min-width           : 320.0px;
+  overflow            : hidden;
+  position            : relative;
+  width               : 100%;
+}
+.musicplayer .image-COai9y {
+  background-color    : rgba(255,255,255,0);
+  height              : 100%;
+  left                : 0px;
+  position            : absolute;
+  top                 : 0px;
+  width               : 100%;
+}
+.musicplayer .player-sxW7OM {
+  background-color    : rgba(255,255,255,0);
+  height              : 194px;
+  left                : 0px;
+  position            : absolute;
+  top                 : 0px;
+  width               : 100%;
+}
+.musicplayer .image-ALia30 {
+  align-items         : flex-start;
+  background-color    : rgba(239,239,239,1.0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 51px;
+  justify-content     : flex-start;
+  left                : 0px;
+  overflow            : hidden;
+  position            : absolute;
+  top                 : 0px;
+  width               : 50px;
+}
+.musicplayer .rectangle-ulVLo2 {
+  background-color    : rgba(255,255,255,0);
+  height              : 50px;
+  left                : 0px;
+  position            : absolute;
+  top                 : 0px;
+  width               : 100%;
+}
+.musicplayer .a2-5iPyUF {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 51px;
+  margin-top          : 9px;
+  position            : relative;
+  width               : 100%;
+}
+.musicplayer .download-btn-Bjw6cb {
+  background-color    : rgba(255,255,255,0);
+  height              : 15px;
+  position            : absolute;
+  right               : 10px;
+  top                 : calc(50.00% - 8px);
+  width               : 12px;
+}
+.musicplayer .progress-bar-Kk3JnN {
+  background-color    : rgba(255,255,255,0);
+  bottom              : 16px;
+  height              : 24px;
+  left                : 16px;
+  position            : absolute;
+  width               : calc(100.00% - 32px);
+}
+.musicplayer .a04-40-MIxz5t {
+  background-color    : rgba(255,255,255,0);
+  color               : rgba(179,179,179,1.0);
+  font-size           : 10.0px;
+  height              : auto;
+  line-height         : 14.0px;
+  position            : absolute;
+  right               : 0px;
+  text-align          : center;
+  top                 : 2px;
+  width               : 35px;
+}
+.musicplayer .group-2-hOKbJA {
+  background-color    : rgba(255,255,255,0);
+  height              : 24px;
+  left                : 35px;
+  position            : absolute;
+  top                 : 0px;
+  width               : calc(100.00% - 70px);
+}
+.musicplayer .line-KR8pE8 {
+  background-color    : var(--auto-palette-color-1);
+  height              : 2px;
+  left                : 0px;
+  opacity             : 0.6;
+  position            : absolute;
+  top                 : 8px;
+  width               : 100%;
+}
+.musicplayer .virtual-hanuman-1-i21yF2 {
+  background-color    : rgba(255,255,255,0);
+  height              : calc(100.00% + 12px);
+  left                : -3px;
+  opacity             : 0.4;
+  position            : absolute;
+  top                 : -3px;
+  width               : calc(100.00% + 6px);
+}
+.musicplayer .path-fnxQc6 {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 12px;
+  position            : relative;
+  width               : 10px;
+}
+.musicplayer .list-yfk4by {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : flex;
+  flex-direction      : column;
+  flex-shrink         : 0;
+  height              : auto;
+  justify-content     : flex-start;
+  margin-top          : 16px;
+  position            : relative;
+  width               : 100%;
+}
+.musicplayer .content-LvPjYy {
+  background-color    : rgba(255,255,255,0);
+  height              : 371px;
+  left                : 16px;
+  position            : absolute;
+  top                 : 50px;
+  width               : calc(100.00% - 32px);
+}
+.musicplayer .queue-dSsNoK {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : flex;
+  flex-direction      : column;
+  height              : auto;
+  justify-content     : flex-start;
+  left                : 0px;
+  position            : absolute;
+  top                 : 230px;
+  width               : 100%;
+}
+.musicplayer .queue-3uxML5 {
+  background-color    : rgba(255,255,255,0);
+  color               : rgba(43,47,63,1.0);
+  flex-shrink         : 0;
+  font-size           : 14.0px;
+  height              : auto;
+  line-height         : 14.0px;
+  min-height          : 14px;
+  min-width           : 54px;
+  position            : relative;
+  text-align          : left;
+  width               : auto;
+}
+.musicplayer .virtual-hanuman-1-EjqUxT {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 50px;
+  margin-left         : -20px;
+  position            : relative;
+  width               : 74px;
+}
+.musicplayer .header-6IR25F {
+  background-color    : rgba(255,255,255,0);
+  height              : 23px;
+  left                : 13px;
+  position            : absolute;
+  top                 : 16px;
+  width               : calc(100.00% - 29px);
+}
+.musicplayer .group-VJKHLK {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 16px;
+  position            : relative;
+  width               : 16px;
+}
+.musicplayer .settings-NOY9KM {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 16px;
+  justify-content     : flex-start;
+  position            : absolute;
+  right               : 0px;
+  top                 : 4px;
+  width               : auto;
+}
+.musicplayer .profile-5sdoBP {
+  background-color    : rgba(255,255,255,0);
+  color               : rgba(34,37,51,1.0);
+  font-size           : 17.0px;
+  height              : auto;
+  line-height         : 23.0px;
+  margin-left         : -0px;
+  position            : absolute;
+  text-align          : center;
+  top                 : 0px;
+  width               : auto;
+}
+.musicplayer .shape-VOkeKY {
+  background-color    : rgba(255,255,255,0);
+  height              : 8px;
+  left                : 4px;
+  position            : absolute;
+  top                 : 4px;
+  width               : 8px;
+}
+.musicplayer .shape-xjYMa2 {
+  background-color    : rgba(255,255,255,0);
+  height              : 15px;
+  left                : 0px;
+  position            : absolute;
+  top                 : 0px;
+  width               : 15px;
+}
+.musicplayer .back-4j0tJR {
+  align-items         : flex-start;
+  background-color    : rgba(255,255,255,0);
+  box-sizing          : border-box;
+  display             : inline-flex;
+  flex-direction      : row;
+  height              : 16px;
+  justify-content     : flex-start;
+  left                : 0px;
+  position            : absolute;
+  top                 : 4px;
+  transform           : rotate(-270deg);
+  width               : auto;
+}
+.musicplayer .shape-QqbFPd {
+  background-color    : rgba(255,255,255,0);
+  flex-shrink         : 0;
+  height              : 16px;
+  position            : relative;
+  transform           : rotate(-180deg);
+  width               : 16px;
+}

@@ -129,13 +129,13 @@
   width               : 1px;
 }
 .musicplayer .path-ZvTMfb {
-  background-color    : rgba(255,255,255,0);
-  height              : calc(6.25% + 10px);
-  left                : 0px;
-  opacity             : 0.3;
-  position            : absolute;
-  top                 : 4px;
-  width               : 12px;
+  background-color: rgba(255,255,255,0);
+  height: 16px;
+  left: 0px;
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  width: 16px;
 }
 .musicplayer .title-i5ERWn {
   align-items         : flex-start;
@@ -220,26 +220,26 @@
   width               : 100%;
 }
 .musicplayer .download-btn-Vf5t2f {
-  align-items         : center;
-  background-color    : rgba(255,255,255,0);
-  box-sizing          : border-box;
-  display             : flex;
-  flex-direction      : column;
-  height              : auto;
-  justify-content     : flex-start;
-  min-height          : 16px;
-  position            : absolute;
-  right               : 10px;
-  top                 : calc(50.00% - 8px);
-  width               : 12px;
+  align-items: center;
+  background-color: rgba(255,255,255,0);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 16px;
+  position: absolute;
+  right: 16px;
+  top: calc(50.00% - 8px);
+  width: 16px;
 }
 .musicplayer .path-ZETeHd {
-  background-color    : rgba(255,255,255,0);
-  flex-shrink         : 0;
-  height              : 11px;
-  margin-top          : 0px;
-  position            : relative;
-  width               : 12px;
+  background-color: rgba(255,255,255,0);
+  flex-shrink: 0;
+  height: 16px;
+  margin-top: 0px;
+  position: relative;
+  width: 16px;
 }
 .musicplayer .path-7qtF1r {
   background-color    : rgba(255,255,255,0);
@@ -302,12 +302,13 @@
   width               : 93px;
 }
 .musicplayer .knob-GR3yHs {
-  background-color    : rgba(255,255,255,0);
-  height              : 24px;
-  left                : 93px;
-  position            : absolute;
-  top                 : 0px;
-  width               : 23px;
+  background-color: rgba(255,255,255,0);
+  height: 40px;
+  left: 93px;
+  position: absolute;
+  top: 0px;
+  width: 40px;
+  transform: translateX(-50%) translateY(-6px);
 }
 .musicplayer .a01-12-ennW0C {
   background-color    : rgba(255,255,255,0);
@@ -409,7 +410,7 @@
   height              : 100%;
   left                : 0px;
   position            : absolute;
-  top                 : 0px;
+  top                 : 5px;
   width               : 100%;
 }
 .musicplayer .player-sxW7OM {
@@ -451,12 +452,12 @@
   width               : 100%;
 }
 .musicplayer .download-btn-Bjw6cb {
-  background-color    : rgba(255,255,255,0);
-  height              : 15px;
-  position            : absolute;
-  right               : 10px;
-  top                 : calc(50.00% - 8px);
-  width               : 12px;
+  background-color: rgba(255,255,255,0);
+  height: 16px;
+  position: absolute;
+  right: 16px;
+  top: calc(50.00% - 8px);
+  width: 16px;
 }
 .musicplayer .progress-bar-Kk3JnN {
   background-color    : rgba(255,255,255,0);
@@ -542,7 +543,7 @@
   justify-content     : flex-start;
   left                : 0px;
   position            : absolute;
-  top                 : 230px;
+  top                 : 5px;
   width               : 100%;
 }
 .musicplayer .queue-3uxML5 {
@@ -616,11 +617,11 @@
 }
 .musicplayer .shape-xjYMa2 {
   background-color    : rgba(255,255,255,0);
-  height              : 15px;
+  height              : 16px;
   left                : 0px;
   position            : absolute;
   top                 : 0px;
-  width               : 15px;
+  width               : 16px;
 }
 .musicplayer .back-4j0tJR {
   align-items         : flex-start;
@@ -643,4 +644,25 @@
   position            : relative;
   transform           : rotate(-180deg);
   width               : 16px;
+}
+
+.music-item .rectangle-yNcs6B {
+  display: none;
+}
+.music-item.active .rectangle-yNcs6B {
+  display: block;
+}
+.musicplayer .music-item.active .hanuman-chalisa-znzsxv {
+  color: var(--auto-palette-color-1);
+  opacity: 1;
+}
+.musicplayer .music-item.active .various-artists-IHOPfm {
+  color: var(--auto-palette-color-1);
+  opacity: 1;
+}
+.musicplayer .music-item .path-ZETeHd, .musicplayer .music-item.active .path-ZvTMfb {
+  display: none;
+}
+.musicplayer .music-item.active .path-ZETeHd, .musicplayer .music-item .path-ZvTMfb {
+  display: block;
 }

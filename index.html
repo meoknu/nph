@@ -17,7 +17,7 @@
     window.onload = function () {
       var input = document.getElementById("fill").focus();
     }
-    const user = localStorage.getItem("user");
+    const user = localStorage.getItem("access_token");
     if (user) {
       window.location.href = 'music.html';
       console.log(user)
@@ -144,7 +144,7 @@
       var mob = document.getElementById("fill").value
       var concode = document.getElementById("country").innerText
       var a = '+' + concode + mob;
-      var localvalue = concode + mob;
+      var localvalue = '+' + concode + mob;
       localStorage.setItem("mobkey", localvalue);
       console.log(a, concode);
       if (mob == "") {

@@ -312,15 +312,12 @@
                     otp: data
                 })
                     .then((response, status, config) => {
-                        console.log(response)
-                        if (response) {
-                            localStorage.removeItem("mobkey");
-
-                            localStorage.setItem("user", true);
+                        if (response && response.data && response.data.access_token) {
+                            localStorage.setItem("access_token", response.data.access_token);
                             window.location.href = 'verificationsuccess.html';
-
+                        } else {
+                            alert('Wrong OTP');
                         }
-
                     }, (error, status, config) => {
                         document.getElementById("message").innerHTML = "**OTP wrong"
                         console.log(error)

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="oleconsApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/music.css">
 </head>
-<body>
+<body ng-controller="oleconsController">
 
     <header>
         <span>
@@ -18,69 +18,58 @@
     </header>
     <section>
         <div class="banner">
-            <img src="img/music-player-virtual-hanuman-1-2@2x.png" alt="">
+            <ion-icon name="musical-notes-outline"></ion-icon>
+            <img src="img/music-player-virtual-hanuman-1-2@2xa.png" alt="">
         </div>
         <div class="controls">
-            <div class="progress">
+            <div class="progress" id="progress">
                 <div class="progress-wrapper">
-                    <div class="progress-bar"></div>
+                    <div class="progress-bar" style="width: {{progress}}%;"></div>
                 </div>
                 <div class="time">
-                    <div class="current-time">3:18</div>
-                    <div class="total-time">4:09</div>
+                    <div class="current-time">{{current_time}}</div>
+                    <div class="total-time">{{duration}}</div>
                 </div>
             </div>
-            <div class="music-info">
-                <div class="music-title">Party Monster</div>
-                <div class="music-album">The Weekend</div>
-            </div>
+            <!-- <div class="music-info">
+                <div class="music-title">{{music.name}}</div>
+                <div class="music-album">Olecons Music</div>
+            </div> -->
             <div class="keys">
-                <a class="loop-button">
+                <a class="loop-button" ng-class="{'inactive': !looped}" ng-click="loop()">
                     <ion-icon name="infinite"></ion-icon>
                 </a>
-                <a class="backward-button">
+                <a class="backward-button" ng-click="backward()">
                     <ion-icon name="play-back"></ion-icon>
                 </a>
-                <a class="play-button">
+                <a class="play-button" ng-click="play()" ng-if="media_paused">
                     <ion-icon name="play-circle-outline"></ion-icon>
                 </a>
-                <a class="forward-button">
+                <a class="pause-button" ng-click="pause()" ng-if="!media_paused">
+                    <ion-icon name="pause-circle-outline"></ion-icon>
+                </a>
+                <a class="forward-button" ng-click="forward()">
                     <ion-icon name="play-forward"></ion-icon>
                 </a>
-                <a class="download-button inactive">
+                <a class="download-button" ng-class="{'inactive': downloaded}" ng-click="download()">
+                    <span class="downloading" id="downloading"></span>
                     <ion-icon name="cloud-download"></ion-icon>
                 </a>
             </div>
         </div>
         <ul class="music-list">
-            <li>
-                <a>
+            <li ng-repeat="music in musics" ng-class="{'active': music.active}">
+                <a ng-click="activate(music)">
                     <div class="poster">
-                        <span>H</span>
-                        <!-- <img src="img/music-player-virtual-hanuman-1-2@2x.png" alt=""> -->
+                        <span>{{music.name.slice(0,1)}}</span>
+                        <img src="{{music.poster}}" alt="">
                     </div>
-                    <span class="music-title">Hanuman Chalisa</span><br>
-                    <span class="music-album">Naveen Raghuvanshi</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <div class="poster">
-                        <span>H</span>
-                        <!-- <img src="img/music-player-virtual-hanuman-1-2@2x.png" alt=""> -->
+                    <span class="music-title">{{music.name}}</span><br>
+                    <span class="music-album">Olecons Music</span>
+                    <div class="button" ng-if="music.music_type == 'premium'">
+                        <!-- <ion-icon name="cart-outline"></ion-icon>&nbsp; -->
+                        ₹ {{music.price/100}}
                     </div>
-                    <span class="music-title">Hanuman Chalisa</span><br>
-                    <span class="music-album">Naveen Raghuvanshi</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <div class="poster">
-                        <span>H</span>
-                        <!-- <img src="img/music-player-virtual-hanuman-1-2@2x.png" alt=""> -->
-                    </div>
-                    <span class="music-title">Hanuman Chalisa</span><br>
-                    <span class="music-album">Naveen Raghuvanshi</span>
                 </a>
             </li>
         </ul>
@@ -91,5 +80,287 @@
 
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 
+    <script src="js/angular.min.js"></script>
+    <script src="config.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script> -->
+    <script src="js/shaka-player.compiled.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script>
+        var AUDIO = document.createElement('audio');
+        var KEYS = {};
+        var MEDIA_URL;
+        var USER;
+
+        $.ajaxSetup({
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'Bearer '+(localStorage.access_token || location.hash));
+            }
+        });
+        
+        $.get(server_url + '/api/user/me', (res) => {
+            console.log(res);
+            USER = res.data
+        }).fail((err) => {
+            delete localStorage.access_token;
+            location.href = "index.html";
+        });
+
+        angular.module('oleconsApp', []).controller('oleconsController', ['$scope', function($scope) {
+
+            $scope.media_paused = true;
+            $scope.stored_music = [];
+            $scope.current_time = "00:00:00";
+            $scope.duration = "00:00:00";
+            $scope.loop = false;
+
+            AUDIO.onplay = function() {
+                $scope.media_paused = false;
+                if (!$scope.$$phase) { $scope.$apply(); }
+            }
+
+            AUDIO.onpause = function() {
+                $scope.media_paused = true;
+                if (!$scope.$$phase) { $scope.$apply(); }
+            }
+
+            AUDIO.ontimeupdate = function() {
+                // AUDIO.muted = true
+                var percentage = (100*AUDIO.currentTime)/AUDIO.duration
+                $scope.progress = percentage;
+                $scope.current_time = AUDIO.currentTime.toString().toDuration()
+                if (!$scope.$$phase) { $scope.$apply(); }
+            }
+
+            AUDIO.onended = function() {
+                var index = $scope.musics.findIndex(music => music.id == $scope.music.id)
+                index++;
+                if(index == $scope.musics.length) {
+                    index = 0;
+                }
+                activate($scope.musics[index]);
+            }
+
+            document.getElementById('progress').onclick = function(e) {
+                var ratio = (e.offsetX/this.offsetWidth);
+                AUDIO.currentTime = ratio*AUDIO.duration;
+            }
+
+            $scope.activate = function(music) {
+                activate(music)
+            }
+
+            function activate(music) {
+                $scope.music = music;
+                $.get(server_url+'/api/music/'+$scope.music.id, (res) => {
+                    if(res.error) {
+                        if(res.error == 'payment_required') {
+                            issuePayment(USER, { type: 'music', id: res.data.id, title: res.data.name, amount: res.data.price });
+                        }
+                        return;
+                    }
+                    KEYS = {};
+                    KEYS[res.data.keyid] = res.data.key;
+                    player.configure({
+                        drm: {
+                            clearKeys: KEYS
+                        }
+                    });
+                    MEDIA_URL = (storage_url+'/media/segments/'+res.data.file+'/stream.mpd');
+                    OFFLINE_MEDIA = $scope.stored_music.find(music => music.originalManifestUri == MEDIA_URL) || {}
+                    console.log(OFFLINE_MEDIA.offlineUri || MEDIA_URL)
+                    player.load(OFFLINE_MEDIA.offlineUri || MEDIA_URL).then(function (e) {
+                        $scope.musics.find(music => music.active = false);
+                        music.active = true;
+                        $scope.duration = AUDIO.duration.toString().toDuration()
+                        $scope.current_time = "00:00:00"
+                        $scope.checkIfDownloaded();
+                        $scope.play();
+                    }).catch(console.error);
+                });
+
+                if (!$scope.$$phase) { $scope.$apply(); }
+            }
+
+            $scope.pause = function() {
+                AUDIO.pause();
+            }
+
+            $scope.play = function() {
+                AUDIO.play();
+            }
+
+            $scope.loop = function() {
+                AUDIO.loop = !AUDIO.loop
+                $scope.looped = AUDIO.loop
+            }
+
+            $scope.forward = function() {
+                AUDIO.currentTime = AUDIO.currentTime+5
+            }
+
+            $scope.backward = function() {
+                AUDIO.currentTime = AUDIO.currentTime-5
+            }
+
+            $scope.download = function() {
+                if($scope.downloaded) {
+                    return;
+                }
+                console.log('download clicked', MEDIA_URL, $scope.music.name);
+                downloadContent(MEDIA_URL, $scope.music.name, $scope.music.id).then(function () {
+                    document.getElementById('downloading').style.display = 'none';
+                    $scope.downloaded = true;
+                    if (!$scope.$$phase) { $scope.$apply(); }
+                    $scope.refreshContentList();
+                }).catch(console.error);
+            }
+
+            $scope.refreshContentList = function() {
+                window.storage.list().then(stored_musics => {
+                    $scope.stored_music = stored_musics;
+                    if (!$scope.$$phase) { $scope.$apply(); }
+                    if($scope.music) {
+                        $scope.checkIfDownloaded();
+                    }
+                })
+            }
+
+            $scope.checkIfDownloaded = function() {
+                var music = $scope.stored_music.find(music => music.appMetadata.id == $scope.music.id)
+                console.log(music);
+                if(music) {
+                    $scope.downloaded = true;
+                } else {
+                    $scope.downloaded = false;
+                }
+                if (!$scope.$$phase) { $scope.$apply(); }
+            }
+
+            function playerReady() {
+                if(window.storage) {
+                    $scope.refreshContentList();
+                    $.get(server_url+'/api/music/', (res) => {
+                        $scope.musics = res.data;
+                        if (!$scope.$$phase) { $scope.$apply(); }
+                        if($scope.musics.length) {
+                            activate($scope.musics[0]);
+                        }
+                    });
+                } else {
+                    setTimeout(playerReady, 1000);
+                }
+            }
+            playerReady()
+        }]);
+
+        document.addEventListener('DOMContentLoaded', initApp);
+
+        function downloadContent(manifestUri, title, id) {
+            var metadata = {
+                'id': id,
+                'title': title,
+                'keys': KEYS,
+                'downloaded': Date()
+            };
+            return window.storage.store(manifestUri, metadata);
+        }
+
+        function initApp() {
+            shaka.polyfill.installAll();
+            if (shaka.Player.isBrowserSupported()) {
+                initPlayer();
+            } else {
+                console.error('Browser not supported!');
+            }
+        }
+
+        function initPlayer() {
+            var player = new shaka.Player(AUDIO);
+            window.player = player;
+            initStorage(player);
+            player.addEventListener('error', console.error);
+        }
+
+        function initStorage(player) {
+            window.storage = new shaka.offline.Storage(player);
+            window.storage.configure({
+                offline: {
+                    progressCallback: setDownloadProgress,
+                    trackSelectionCallback: selectTracks,
+                    usePersistentLicense: false
+                }
+            });
+        }
+
+        function setDownloadProgress(content, progress) {
+            console.log(content, progress)
+            document.getElementById('downloading').style.display = 'block';
+            document.getElementById('downloading').style.borderWidth = (progress*24)+'px';
+        }
+
+
+        function selectTracks(tracks) {
+            var found = tracks
+                .filter(function (track) { return track.type == 'variant'; })
+                .sort(function (a, b) { return a.bandwidth - b.bandwidth; })
+                .pop();
+            console.log('Offline Track bandwidth: ' + found.bandwidth);
+            return [found];
+        }
+
+        function issuePayment(user, asset) {
+            var blah = new Razorpay({
+                "key": "rzp_test_JdkFVMuQnqpfhZ",
+                "amount": asset.amount,
+                "name": "order_"+asset.type,
+                "currency": "INR", // Optional. Same as the Order currency
+                "description": asset.title,
+                "image": "",
+                "handler": function (response) {
+                    console.log(response)
+                    // if (response.razorpay_payment_id) {
+                        // var registerdata = {
+                        //     payment_id : (response.razorpay_payment_id),
+                        //     user: user.id,
+                        //     media: event.jPlayer.status.media.id
+                        // }
+                        // // location.href = "?"+$.param(registerdata);
+                        // $.ajax({
+                        //     url: url+'/media/',
+                        //     type: 'POST',
+                        //     beforeSend: function (xhr) {
+                        //         xhr.setRequestHeader('Authorization', 'Token '+localStorage.token);
+                        //     },
+                        //     data: registerdata,
+                        //     success: function () {
+                        //         location.reload();
+                        //     },
+                        //     error: function () {
+                        //         alert("Media Purchase Fail");
+                        //     },
+                        // });
+                    // } else {
+                    //     alert("Payment Failed!");
+                    // }
+                },
+                "prefill": {
+                    "name": user.first_name + user.last_name,
+                    "email": user.email,
+                    "contact": user.mobile_number,
+                },
+                "notes": {
+                    "user_id": user.id,
+                    "asset_type": asset.type,
+                    "asset_id": asset.id
+                },
+                "theme": {
+                    "color": "#F37254"
+                }
+            });
+            blah.open();
+        }
+    </script>
 </body>
 </html>
